@@ -1,0 +1,646 @@
+[
+  {
+    "id": "bioderma-photoderm-akn-mat",
+    "slug": "photoderm-akn-mat",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn", "da hỗn hợp thiên dầu"],
+      "spfs": "SPF30",
+      "ingredients": ["Salicylic Acid", "Glycolic Acid", "Vitamin E"],
+      "effects": ["kiềm dầu", "giảm mụn", "chống nắng"],
+      "finish": "lì"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm AKN Mat SPF30",
+      "short_description": "chống nắng kiềm dầu + hỗ trợ mụn",
+      "full_description": "Bioderma Photoderm AKN Mat SPF30 là kem chống nắng chuyên biệt cho da dầu mụn, giúp bảo vệ da khỏi tia UV đồng thời kiểm soát bã nhờn và giảm nguy cơ hình thành mụn. Công thức chứa Salicylic Acid và Glycolic Acid giúp làm sạch lỗ chân lông, kết hợp công nghệ Fluidactiv™ giúp điều hòa dầu hiệu quả. Kết cấu mỏng nhẹ, finish lì giúp da luôn khô thoáng suốt ngày.",
+      "highlights": [
+        "kiềm dầu mạnh",
+        "hỗ trợ giảm mụn",
+        "finish lì không bóng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-photoderm-aquafluide",
+    "slug": "photoderm-aquafluide",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da", "da nhạy cảm"],
+      "spfs": "SPF50+",
+      "ingredients": ["Glycerin", "Vitamin E"],
+      "effects": ["chống nắng", "dưỡng ẩm nhẹ"],
+      "finish": "tự nhiên"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm Aquafluide SPF50+",
+      "short_description": "siêu nhẹ, không bí da",
+      "full_description": "Bioderma Photoderm Aquafluide SPF50+ là kem chống nắng với kết cấu siêu lỏng nhẹ, mang lại cảm giác thoáng da và không nhờn rít. Sản phẩm bảo vệ da mạnh mẽ trước tia UVA/UVB đồng thời duy trì độ ẩm tự nhiên, phù hợp sử dụng hàng ngày trong khí hậu nóng ẩm. Đây là lựa chọn lý tưởng cho những ai cần chống nắng nhẹ mặt và dễ chịu.",
+      "highlights": [
+        "siêu nhẹ",
+        "không vệt trắng",
+        "dùng hàng ngày"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-photoderm-spot-age",
+    "slug": "photoderm-spot-age",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da lão hoá", "da nám", "da không đều màu"],
+      "spfs": "SPF50+",
+      "ingredients": ["Vitamin C", "Vitamin E", "Hyaluronic Acid"],
+      "effects": ["chống nắng", "chống lão hoá", "làm sáng"],
+      "finish": "tự nhiên"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm Spot-Age SPF50+",
+      "short_description": "chống nắng + chống lão hoá",
+      "full_description": "Bioderma Photoderm Spot-Age SPF50+ là kem chống nắng kết hợp chăm sóc da chuyên sâu, giúp bảo vệ da khỏi tia UV đồng thời giảm đốm nâu và nếp nhăn. Công thức chứa Vitamin C, E và Hyaluronic Acid giúp chống oxy hóa, cấp ẩm và cải thiện độ đàn hồi da. Sản phẩm phù hợp cho da từ 25+ hoặc đang có dấu hiệu lão hóa.",
+      "highlights": [
+        "chống lão hoá",
+        "giảm nám",
+        "cấp ẩm"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 550000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-photoderm-xdefense",
+    "slug": "photoderm-xdefense",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "spfs": "SPF50+",
+      "ingredients": ["Vitamin E"],
+      "effects": ["chống nắng", "chống ô nhiễm", "chống ánh sáng xanh"],
+      "finish": "lì nhẹ"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm XDefense Ultra-Fluid SPF50+",
+      "short_description": "chống nắng đa tầng",
+      "full_description": "Bioderma Photoderm XDefense Ultra-Fluid SPF50+ là kem chống nắng thế hệ mới giúp bảo vệ da khỏi tia UV, ánh sáng xanh và ô nhiễm môi trường. Sản phẩm giúp ngăn ngừa xỉn màu và stress oxy hóa, mang lại làn da khỏe mạnh hơn trong môi trường đô thị.",
+      "highlights": [
+        "chống ô nhiễm",
+        "chống ánh sáng xanh",
+        "siêu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-photoderm-creme",
+    "slug": "photoderm-creme",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "spfs": "SPF50+",
+      "ingredients": ["Glycerin", "Vitamin E"],
+      "effects": ["chống nắng", "dưỡng ẩm"],
+      "finish": "ẩm nhẹ"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm Crème SPF50+",
+      "short_description": "dưỡng ẩm + chống nắng",
+      "full_description": "Bioderma Photoderm Crème SPF50+ là kem chống nắng dành cho da khô và nhạy cảm, giúp bảo vệ da khỏi tia UV đồng thời cung cấp độ ẩm lâu dài. Kết cấu kem giúp da mềm mại, giảm khô căng và phù hợp sử dụng trong môi trường máy lạnh hoặc thời tiết hanh khô.",
+      "highlights": [
+        "dưỡng ẩm sâu",
+        "phù hợp da khô",
+        "không gây kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-photoderm-spray",
+    "slug": "photoderm-spray",
+    "brand": "Bioderma",
+    "category": "kem chống nắng",
+    "type": "body sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "dễ sử dụng"],
+      "finish": "tự nhiên"
+    },
+
+    "display": {
+      "title": "Bioderma Photoderm Max Spray SPF50+",
+      "short_description": "xịt chống nắng toàn thân",
+      "full_description": "Bioderma Photoderm Max Spray SPF50+ là sản phẩm chống nắng dạng xịt giúp bảo vệ da toàn thân nhanh chóng và tiện lợi. Kết cấu nhẹ giúp dễ dàng apply lại nhiều lần trong ngày, phù hợp cho các hoạt động ngoài trời như đi biển hoặc thể thao.",
+      "highlights": [
+        "dạng xịt tiện lợi",
+        "apply nhanh",
+        "phù hợp body"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 600000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-hyaluron-sunscreen",
+    "slug": "hyaluron-moist-sunscreen",
+    "brand": "Innisfree",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da", "da khô"],
+      "spfs": "SPF50+",
+      "ingredients": ["Hyaluronic Acid", "Aloe"],
+      "effects": ["chống nắng", "dưỡng ẩm"],
+      "finish": "căng bóng"
+    },
+
+    "display": {
+      "title": "Innisfree Hyaluron Moist Sunscreen SPF50+",
+      "short_description": "cấp ẩm mạnh, da căng bóng",
+      "full_description": "Innisfree Hyaluron Moist Sunscreen SPF50+ là kem chống nắng kết hợp dưỡng ẩm sâu với phức hợp nhiều loại Hyaluronic Acid giúp giữ nước đa tầng cho da. Sản phẩm giúp bảo vệ da khỏi tia UV đồng thời mang lại làn da căng mịn, mềm mại và không bị khô căng.",
+      "highlights": [
+        "cấp ẩm mạnh",
+        "da căng bóng",
+        "không vệt trắng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 550000 }
+    ]
+  }
+]
+
+[
+  {
+    "id": "innisfree-intensive-longlasting",
+    "slug": "intensive-longlasting",
+    "brand": "Innisfree",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu", "da hỗn hợp"],
+      "spfs": "SPF50+",
+      "ingredients": ["Green Tea", "Centella"],
+      "effects": ["chống nắng", "kiềm dầu", "chống nước"],
+      "finish": "lì"
+    },
+
+    "display": {
+      "title": "Innisfree Intensive Long-lasting Sunscreen EX SPF50+",
+      "short_description": "chống nắng lâu trôi + kiềm dầu",
+      "full_description": "Innisfree Intensive Long-lasting Sunscreen EX SPF50+ là kem chống nắng giúp bảo vệ da hiệu quả dưới ánh nắng mạnh, đồng thời kiểm soát dầu và duy trì lớp nền khô ráo trong thời gian dài. Sản phẩm phù hợp cho da dầu hoặc người thường xuyên hoạt động ngoài trời.",
+      "highlights": [
+        "lâu trôi",
+        "kiềm dầu",
+        "phù hợp ngoài trời"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-toneup-no-sebum",
+    "slug": "toneup-no-sebum",
+    "brand": "Innisfree",
+    "category": "kem chống nắng",
+    "type": "tone-up sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu", "da xỉn màu"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "nâng tone", "kiềm dầu"],
+      "finish": "sáng lì"
+    },
+
+    "display": {
+      "title": "Innisfree Tone Up No Sebum Sunscreen SPF50+",
+      "short_description": "nâng tone + kiềm dầu",
+      "full_description": "Innisfree Tone Up No Sebum Sunscreen SPF50+ giúp bảo vệ da khỏi tia UV đồng thời mang lại hiệu ứng nâng tone nhẹ tự nhiên. Sản phẩm giúp kiểm soát dầu và tạo lớp finish mịn lì, phù hợp dùng hàng ngày hoặc thay thế lớp makeup nhẹ.",
+      "highlights": [
+        "nâng tone",
+        "kiềm dầu",
+        "finish mịn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-vitamin-c-toneup",
+    "slug": "vitamin-c-toneup",
+    "brand": "Innisfree",
+    "category": "kem chống nắng",
+    "type": "tone-up sunscreen",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "spfs": "SPF50+",
+      "ingredients": ["Vitamin C", "Niacinamide"],
+      "effects": ["chống nắng", "làm sáng"],
+      "finish": "sáng hồng"
+    },
+
+    "display": {
+      "title": "Innisfree Vitamin C Tone-Up Sunscreen SPF50+",
+      "short_description": "chống nắng + dưỡng sáng",
+      "full_description": "Innisfree Vitamin C Tone-Up Sunscreen SPF50+ là kem chống nắng kết hợp dưỡng sáng da, giúp cải thiện tình trạng xỉn màu và mang lại làn da tươi tắn hơn. Công thức chứa Vitamin C và Niacinamide giúp đều màu và nâng tone nhẹ.",
+      "highlights": [
+        "dưỡng sáng",
+        "đều màu",
+        "nâng tone nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-triple-care",
+    "slug": "triple-care",
+    "brand": "Innisfree",
+    "category": "kem chống nắng",
+    "type": "multi-function sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "nâng tone", "chống lão hoá"],
+      "finish": "sáng nhẹ"
+    },
+
+    "display": {
+      "title": "Innisfree Intensive Triple Care Sunscreen SPF50+",
+      "short_description": "3 trong 1: chống nắng + nâng tone",
+      "full_description": "Innisfree Intensive Triple Care Sunscreen SPF50+ là kem chống nắng đa chức năng giúp bảo vệ da, nâng tone nhẹ và hỗ trợ chống lão hoá. Sản phẩm phù hợp cho người muốn tối giản skincare.",
+      "highlights": [
+        "3 trong 1",
+        "tiện lợi",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 180000 }
+    ]
+  },
+
+  {
+    "id": "loreal-uv-invisible",
+    "slug": "uv-defender-invisible",
+    "brand": "Loreal",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "spfs": "SPF50+",
+      "ingredients": ["Vitamin E"],
+      "effects": ["chống nắng", "chống lão hoá"],
+      "finish": "tự nhiên"
+    },
+
+    "display": {
+      "title": "L'Oreal UV Defender Invisible Fluid SPF50+",
+      "short_description": "siêu nhẹ, không cảm giác",
+      "full_description": "L'Oreal UV Defender Invisible Fluid SPF50+ mang lại khả năng chống nắng mạnh mẽ với kết cấu siêu nhẹ như nước, giúp da luôn thoáng và không bị bí. Sản phẩm phù hợp dùng hàng ngày trong khí hậu nóng ẩm.",
+      "highlights": [
+        "siêu nhẹ",
+        "không bí da",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 270000 }
+    ]
+  },
+
+  {
+    "id": "loreal-uv-matte",
+    "slug": "uv-defender-matte",
+    "brand": "Loreal",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "kiềm dầu"],
+      "finish": "lì"
+    },
+
+    "display": {
+      "title": "L'Oreal UV Defender Matte & Fresh SPF50+",
+      "short_description": "kiềm dầu mạnh",
+      "full_description": "L'Oreal UV Defender Matte & Fresh SPF50+ giúp kiểm soát dầu và giữ làn da khô ráo suốt ngày. Công thức phù hợp cho da dầu trong môi trường nóng ẩm.",
+      "highlights": [
+        "kiềm dầu",
+        "finish lì",
+        "không bóng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 280000 }
+    ]
+  },
+
+  {
+    "id": "loreal-uv-bright",
+    "slug": "uv-defender-bright",
+    "brand": "Loreal",
+    "category": "kem chống nắng",
+    "type": "brightening sunscreen",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "spfs": "SPF50+",
+      "ingredients": ["Niacinamide"],
+      "effects": ["chống nắng", "làm sáng"],
+      "finish": "sáng nhẹ"
+    },
+
+    "display": {
+      "title": "L'Oreal UV Defender Bright & Clear SPF50+",
+      "short_description": "chống nắng + sáng da",
+      "full_description": "L'Oreal UV Defender Bright & Clear SPF50+ giúp bảo vệ da khỏi tia UV đồng thời cải thiện độ sáng và đều màu da nhờ Niacinamide.",
+      "highlights": [
+        "làm sáng",
+        "đều màu",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 340000 }
+    ]
+  },
+
+  {
+    "id": "loreal-uv-correct",
+    "slug": "uv-defender-correct",
+    "brand": "Loreal",
+    "category": "kem chống nắng",
+    "type": "anti-aging sunscreen",
+
+    "core": {
+      "skin_type": ["da lão hoá"],
+      "spfs": "SPF50+",
+      "ingredients": ["Vitamin C"],
+      "effects": ["chống nắng", "chống oxy hoá"],
+      "finish": "tự nhiên"
+    },
+
+    "display": {
+      "title": "L'Oreal UV Defender Correct & Protect SPF50+",
+      "short_description": "chống nắng + chống lão hoá",
+      "full_description": "L'Oreal UV Defender Correct & Protect SPF50+ giúp bảo vệ da khỏi tia UV và hỗ trợ cải thiện dấu hiệu lão hoá, mang lại làn da khỏe mạnh hơn.",
+      "highlights": [
+        "chống lão hoá",
+        "nhẹ",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 340000 }
+    ]
+  },
+
+  {
+    "id": "loreal-uv-moist",
+    "slug": "uv-defender-moist",
+    "brand": "Loreal",
+    "category": "kem chống nắng",
+    "type": "moisturizing sunscreen",
+
+    "core": {
+      "skin_type": ["da khô"],
+      "spfs": "SPF50+",
+      "ingredients": ["Glycerin"],
+      "effects": ["chống nắng", "dưỡng ẩm"],
+      "finish": "ẩm nhẹ"
+    },
+
+    "display": {
+      "title": "L'Oreal UV Defender Moist & Fresh SPF50+",
+      "short_description": "chống nắng + dưỡng ẩm",
+      "full_description": "L'Oreal UV Defender Moist & Fresh SPF50+ giúp bảo vệ da đồng thời cung cấp độ ẩm, mang lại làn da mềm mại và không bị khô căng.",
+      "highlights": [
+        "dưỡng ẩm",
+        "mềm da",
+        "không khô"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 300000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-winter-melon-sunscreen",
+    "slug": "winter-melon-sunscreen",
+    "brand": "Cocoon",
+    "category": "kem chống nắng",
+    "type": "sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "spfs": "SPF50+",
+      "ingredients": ["Winter Melon", "Centella"],
+      "effects": ["chống nắng", "giảm mụn", "kiềm dầu"],
+      "finish": "lì"
+    },
+
+    "display": {
+      "title": "Cocoon Winter Melon Sunscreen SPF50+",
+      "short_description": "thuần chay cho da mụn",
+      "full_description": "Cocoon Winter Melon Sunscreen SPF50+ là kem chống nắng thuần chay giúp bảo vệ da khỏi tia UV đồng thời kiểm soát dầu và hỗ trợ giảm mụn. Sản phẩm phù hợp với khí hậu nóng ẩm.",
+      "highlights": [
+        "thuần chay",
+        "giảm mụn",
+        "kiềm dầu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-toneup",
+    "slug": "cocoon-toneup",
+    "brand": "Cocoon",
+    "category": "kem chống nắng",
+    "type": "tone-up sunscreen",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "nâng tone"],
+      "finish": "sáng"
+    },
+
+    "display": {
+      "title": "Cocoon Tone-Up Sunscreen SPF50+",
+      "short_description": "nâng tone nhẹ",
+      "full_description": "Cocoon Tone-Up Sunscreen SPF50+ giúp bảo vệ da và mang lại hiệu ứng sáng da tự nhiên, phù hợp dùng hàng ngày.",
+      "highlights": [
+        "nâng tone",
+        "nhẹ",
+        "tự nhiên"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-lightweight",
+    "slug": "cocoon-lightweight",
+    "brand": "Cocoon",
+    "category": "kem chống nắng",
+    "type": "lightweight sunscreen",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng"],
+      "finish": "nhẹ"
+    },
+
+    "display": {
+      "title": "Cocoon Lightweight Sunscreen SPF50+",
+      "short_description": "siêu nhẹ, dễ dùng",
+      "full_description": "Cocoon Lightweight Sunscreen SPF50+ có kết cấu siêu nhẹ giúp bảo vệ da hàng ngày mà không gây nặng mặt, phù hợp cho người mới skincare.",
+      "highlights": [
+        "siêu nhẹ",
+        "dễ dùng",
+        "thoáng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 240000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-sensitive",
+    "slug": "cocoon-sensitive",
+    "brand": "Cocoon",
+    "category": "kem chống nắng",
+    "type": "sensitive sunscreen",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "làm dịu"],
+      "finish": "mềm"
+    },
+
+    "display": {
+      "title": "Cocoon Sensitive Sunscreen SPF50+",
+      "short_description": "cho da nhạy cảm",
+      "full_description": "Cocoon Sensitive Sunscreen SPF50+ được thiết kế cho làn da nhạy cảm với công thức dịu nhẹ giúp bảo vệ da mà không gây kích ứng.",
+      "highlights": [
+        "dịu nhẹ",
+        "không kích ứng",
+        "phù hợp da yếu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-mini",
+    "slug": "cocoon-mini",
+    "brand": "Cocoon",
+    "category": "kem chống nắng",
+    "type": "mini sunscreen",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "spfs": "SPF50+",
+      "effects": ["chống nắng", "tiện lợi"],
+      "finish": "nhẹ"
+    },
+
+    "display": {
+      "title": "Cocoon Sunscreen Mini SPF50+",
+      "short_description": "size mini tiện lợi",
+      "full_description": "Cocoon Sunscreen Mini SPF50+ là phiên bản nhỏ gọn giúp dễ dàng mang theo khi di chuyển, phù hợp dùng thử hoặc du lịch.",
+      "highlights": [
+        "mini tiện lợi",
+        "dễ mang theo",
+        "giá rẻ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "15ml", "price": 90000 }
+    ]
+  }
+]

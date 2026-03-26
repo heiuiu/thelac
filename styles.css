@@ -431,6 +431,7 @@ h1 {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 14px;
+  align-items: center;
 }
 
 .tag {
@@ -720,6 +721,34 @@ h1 {
   border-radius: 999px;
   padding: 6px 10px;
   font-size: 0.9rem;
+}
+
+.chips-toggle {
+  margin-top: 0;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 28px;
+}
+
+/* Outline chevron (no fill) for toggle arrows */
+.chips-toggle::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform-origin: 50% 50%;
+  transform: translateY(-0.5px) rotate(45deg); /* down */
+  display: inline-block;
+}
+
+.chips-toggle[data-expanded="true"]::before {
+  transform: translateY(-0.5px) rotate(-135deg); /* up */
 }
 
 .pdp-grid {

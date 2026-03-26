@@ -1,0 +1,528 @@
+[
+  {
+    "id": "cocoon-winter-melon-mask",
+    "slug": "winter-melon-mask",
+    "brand": "Cocoon",
+    "category": "mặt nạ",
+    "type": "gel mask",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Winter Melon", "Centella", "Tea Tree"],
+      "effects": ["giảm dầu", "giảm mụn", "làm dịu"],
+      "usage_frequency": "2-3 lần/tuần"
+    },
+
+    "display": {
+      "title": "Cocoon Winter Melon Mask",
+      "short_description": "giảm dầu + hỗ trợ mụn",
+      "full_description": "Cocoon Winter Melon Mask là mặt nạ thuần chay giúp làm sạch sâu, kiểm soát dầu và hỗ trợ giảm mụn hiệu quả. Chiết xuất bí đao kết hợp rau má và tràm trà giúp làm dịu da, giảm viêm và hạn chế bít tắc lỗ chân lông. Sản phẩm mang lại làn da thông thoáng, mịn màng và ít bóng dầu hơn sau khi sử dụng.",
+      "highlights": [
+        "giảm dầu",
+        "giảm mụn",
+        "thuần chay"
+      ]
+    },
+
+    "price_options": [
+      { "size": "30ml", "price": 150000 },
+      { "size": "100ml", "price": 340000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-turmeric-mask",
+    "slug": "turmeric-mask",
+    "brand": "Cocoon",
+    "category": "mặt nạ",
+    "type": "cream mask",
+
+    "core": {
+      "skin_type": ["da mụn", "da thâm"],
+      "ingredients": ["Turmeric", "Vitamin E"],
+      "effects": ["mờ thâm", "làm sáng", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Cocoon Turmeric Mask",
+      "short_description": "mờ thâm + sáng da",
+      "full_description": "Cocoon Turmeric Mask giúp cải thiện thâm mụn và làm sáng da nhờ chiết xuất nghệ giàu curcumin kết hợp Vitamin E. Sản phẩm hỗ trợ phục hồi da sau mụn, mang lại làn da đều màu và rạng rỡ hơn khi sử dụng thường xuyên.",
+      "highlights": [
+        "mờ thâm",
+        "làm sáng",
+        "phục hồi da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "30ml", "price": 140000 },
+      { "size": "100ml", "price": 320000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-rose-mask",
+    "slug": "rose-mask",
+    "brand": "Cocoon",
+    "category": "mặt nạ",
+    "type": "gel mask",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "ingredients": ["Rose Water", "Hyaluronic Acid"],
+      "effects": ["dưỡng ẩm", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Cocoon Rose Mask",
+      "short_description": "cấp ẩm + làm dịu",
+      "full_description": "Cocoon Rose Mask giúp cấp ẩm sâu và làm dịu làn da nhạy cảm nhờ nước hoa hồng và Hyaluronic Acid. Kết cấu gel nhẹ mang lại cảm giác mát da, giúp da mềm mại và tươi tắn hơn sau khi sử dụng.",
+      "highlights": [
+        "cấp ẩm",
+        "làm dịu",
+        "mát da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 220000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-coffee-mask",
+    "slug": "coffee-mask",
+    "brand": "Cocoon",
+    "category": "mặt nạ",
+    "type": "scrub mask",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "ingredients": ["Coffee", "Coconut Oil"],
+      "effects": ["tẩy tế bào chết", "làm sáng"]
+    },
+
+    "display": {
+      "title": "Cocoon Coffee Mask",
+      "short_description": "tẩy da chết + sáng da",
+      "full_description": "Cocoon Coffee Mask giúp loại bỏ tế bào chết nhẹ nhàng nhờ hạt cà phê mịn, đồng thời kích thích tuần hoàn và mang lại làn da sáng khỏe hơn. Sản phẩm phù hợp cho da xỉn màu hoặc da sần sùi cần cải thiện độ mịn.",
+      "highlights": [
+        "tẩy da chết",
+        "làm sáng",
+        "mịn da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-green-tea-sheet",
+    "slug": "green-tea-sheet-mask",
+    "brand": "Innisfree",
+    "category": "mặt nạ",
+    "type": "sheet mask",
+
+    "core": {
+      "skin_type": ["mọi loại da", "da khô"],
+      "ingredients": ["Green Tea", "Glycerin"],
+      "effects": ["cấp ẩm", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Innisfree My Real Squeeze Mask (Green Tea)",
+      "short_description": "cấp ẩm nhanh + làm dịu",
+      "full_description": "Innisfree My Real Squeeze Mask Green Tea là mặt nạ giấy giúp cấp ẩm tức thì và làm dịu da nhờ chiết xuất trà xanh Jeju. Sản phẩm giúp da mềm mịn, tươi tắn và giảm kích ứng sau khi sử dụng.",
+      "highlights": [
+        "cấp ẩm nhanh",
+        "làm dịu",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "1 miếng", "price": 30000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-green-tea-sleeping",
+    "slug": "green-tea-sleeping-mask",
+    "brand": "Innisfree",
+    "category": "mặt nạ",
+    "type": "sleeping mask",
+
+    "core": {
+      "skin_type": ["da khô", "da thường"],
+      "ingredients": ["Green Tea", "Hyaluronic Acid"],
+      "effects": ["cấp ẩm", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Sleeping Mask",
+      "short_description": "cấp ẩm qua đêm",
+      "full_description": "Innisfree Green Tea Sleeping Mask giúp cấp ẩm sâu và phục hồi làn da trong khi ngủ, mang lại làn da căng mịn và tươi sáng vào sáng hôm sau. Kết cấu gel nhẹ không gây bí da.",
+      "highlights": [
+        "dưỡng qua đêm",
+        "cấp ẩm sâu",
+        "không bết"
+      ]
+    },
+
+    "price_options": [
+      { "size": "80ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-brightening-sleeping",
+    "slug": "brightening-pore-sleeping-mask",
+    "brand": "Innisfree",
+    "category": "mặt nạ",
+    "type": "sleeping mask",
+
+    "core": {
+      "skin_type": ["da xỉn màu", "da hỗn hợp"],
+      "ingredients": ["Niacinamide"],
+      "effects": ["làm sáng", "se lỗ chân lông"]
+    },
+
+    "display": {
+      "title": "Innisfree Brightening Pore Sleeping Mask",
+      "short_description": "sáng da + se lỗ chân lông",
+      "full_description": "Innisfree Brightening Pore Sleeping Mask giúp cải thiện độ sáng da và thu nhỏ lỗ chân lông trong khi ngủ. Sản phẩm mang lại làn da đều màu và mịn màng hơn sau mỗi đêm.",
+      "highlights": [
+        "làm sáng",
+        "se lỗ chân lông",
+        "dưỡng đêm"
+      ]
+    },
+
+    "price_options": [
+      { "size": "80ml", "price": 380000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-carrot-sheet",
+    "slug": "carrot-sheet-mask",
+    "brand": "Innisfree",
+    "category": "mặt nạ",
+    "type": "sheet mask",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "ingredients": ["Carrot", "Vitamin A"],
+      "effects": ["phục hồi", "dưỡng ẩm"]
+    },
+
+    "display": {
+      "title": "Innisfree Jeju Root Energy Mask (Carrot)",
+      "short_description": "phục hồi + tăng sức sống",
+      "full_description": "Innisfree Jeju Root Energy Mask Carrot giúp nuôi dưỡng và phục hồi làn da nhờ chiết xuất cà rốt giàu vitamin. Sản phẩm mang lại làn da khỏe mạnh, tươi sáng và tràn đầy sức sống.",
+      "highlights": [
+        "phục hồi",
+        "dưỡng chất",
+        "tươi sáng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "1 miếng", "price": 30000 }
+    ]
+  }
+]
+
+[
+  {
+    "id": "bioderma-hydrabio-mask",
+    "slug": "hydrabio-masque",
+    "brand": "Bioderma",
+    "category": "mặt nạ",
+    "type": "hydrating mask",
+
+    "core": {
+      "skin_type": ["da khô", "da thiếu nước", "da nhạy cảm"],
+      "ingredients": ["Glycerin", "Niacinamide"],
+      "effects": ["cấp ẩm", "phục hồi", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Bioderma Hydrabio Masque",
+      "short_description": "cấp ẩm sâu + phục hồi da",
+      "full_description": "Bioderma Hydrabio Masque là mặt nạ cấp ẩm chuyên sâu giúp phục hồi làn da khô và thiếu nước. Công thức hỗ trợ kích hoạt cơ chế giữ nước tự nhiên của da, mang lại làn da mềm mịn, căng bóng và khỏe mạnh hơn sau khi sử dụng.",
+      "highlights": [
+        "cấp ẩm sâu",
+        "phục hồi da",
+        "căng bóng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sebium-mask",
+    "slug": "sebium-pore-mask",
+    "brand": "Bioderma",
+    "category": "mặt nạ",
+    "type": "clay mask",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Zinc", "Salicylic Acid", "Silica"],
+      "effects": ["kiềm dầu", "làm sạch", "giảm mụn"]
+    },
+
+    "display": {
+      "title": "Bioderma Sébium Pore Refiner Mask",
+      "short_description": "kiềm dầu + se lỗ chân lông",
+      "full_description": "Bioderma Sébium Mask giúp kiểm soát dầu thừa, làm sạch sâu lỗ chân lông và hỗ trợ giảm mụn đầu đen. Công thức chứa Zinc và Salicylic Acid giúp làm sạch hiệu quả mà vẫn dịu nhẹ cho da.",
+      "highlights": [
+        "kiềm dầu",
+        "se lỗ chân lông",
+        "giảm mụn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sensibio-mask",
+    "slug": "sensibio-mask",
+    "brand": "Bioderma",
+    "category": "mặt nạ",
+    "type": "soothing mask",
+
+    "core": {
+      "skin_type": ["da nhạy cảm", "da kích ứng"],
+      "ingredients": ["Allantoin", "Glycerin"],
+      "effects": ["làm dịu", "giảm đỏ", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Bioderma Sensibio Mask",
+      "short_description": "làm dịu nhanh da kích ứng",
+      "full_description": "Bioderma Sensibio Mask giúp làm dịu nhanh các tình trạng kích ứng, đỏ rát và phục hồi làn da yếu. Sản phẩm phù hợp dùng sau treatment hoặc khi da bị stress.",
+      "highlights": [
+        "làm dịu nhanh",
+        "giảm đỏ",
+        "phục hồi"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-white-mask",
+    "slug": "white-objective-mask",
+    "brand": "Bioderma",
+    "category": "mặt nạ",
+    "type": "brightening mask",
+
+    "core": {
+      "skin_type": ["da xỉn màu", "da thâm"],
+      "ingredients": ["Vitamin C", "Glycolic Acid"],
+      "effects": ["làm sáng", "giảm thâm"]
+    },
+
+    "display": {
+      "title": "Bioderma White Objective Mask",
+      "short_description": "làm sáng + giảm thâm",
+      "full_description": "Bioderma White Objective Mask giúp cải thiện sắc tố da, giảm thâm và làm sáng làn da. Công thức chứa Vitamin C và Glycolic Acid hỗ trợ đều màu và tăng độ rạng rỡ.",
+      "highlights": [
+        "làm sáng",
+        "giảm thâm",
+        "đều màu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 600000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-atoderm-mask",
+    "slug": "atoderm-intensive-mask",
+    "brand": "Bioderma",
+    "category": "mặt nạ",
+    "type": "repair mask",
+
+    "core": {
+      "skin_type": ["da rất khô", "da viêm"],
+      "ingredients": ["Shea Butter", "Niacinamide"],
+      "effects": ["phục hồi", "giảm khô", "giảm kích ứng"]
+    },
+
+    "display": {
+      "title": "Bioderma Atoderm Intensive Mask",
+      "short_description": "phục hồi da cực khô",
+      "full_description": "Bioderma Atoderm Intensive Mask giúp phục hồi làn da rất khô, giảm bong tróc và kích ứng. Công thức dưỡng ẩm sâu giúp da mềm mại và khỏe hơn.",
+      "highlights": [
+        "dưỡng ẩm mạnh",
+        "phục hồi da",
+        "giảm kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 700000 }
+    ]
+  },
+
+  {
+    "id": "loreal-detox-mask",
+    "slug": "pure-clay-detox",
+    "brand": "Loreal",
+    "category": "mặt nạ",
+    "type": "clay mask",
+
+    "core": {
+      "skin_type": ["da dầu", "da bít tắc"],
+      "ingredients": ["Charcoal", "Clay"],
+      "effects": ["làm sạch sâu", "thải độc"]
+    },
+
+    "display": {
+      "title": "L'Oreal Pure Clay Detox Mask",
+      "short_description": "thải độc + làm sạch sâu",
+      "full_description": "L'Oreal Pure Clay Detox Mask với than hoạt tính giúp làm sạch sâu lỗ chân lông, loại bỏ bụi bẩn và dầu thừa. Sản phẩm mang lại làn da sạch thoáng và tươi sáng hơn.",
+      "highlights": [
+        "thải độc",
+        "làm sạch sâu",
+        "giảm mụn đầu đen"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "loreal-bright-mask",
+    "slug": "pure-clay-bright",
+    "brand": "Loreal",
+    "category": "mặt nạ",
+    "type": "brightening mask",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "ingredients": ["Turmeric"],
+      "effects": ["làm sáng"]
+    },
+
+    "display": {
+      "title": "L'Oreal Pure Clay Bright Mask",
+      "short_description": "làm sáng da",
+      "full_description": "L'Oreal Pure Clay Bright Mask giúp cải thiện độ sáng và mang lại làn da rạng rỡ nhờ chiết xuất nghệ kết hợp đất sét.",
+      "highlights": [
+        "làm sáng",
+        "đều màu",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "loreal-anti-pores-mask",
+    "slug": "pure-clay-anti-pores",
+    "brand": "Loreal",
+    "category": "mặt nạ",
+    "type": "clay mask",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "ingredients": ["Seaweed", "Clay"],
+      "effects": ["se lỗ chân lông", "kiềm dầu"]
+    },
+
+    "display": {
+      "title": "L'Oreal Pure Clay Anti-Pores Mask",
+      "short_description": "se lỗ chân lông",
+      "full_description": "L'Oreal Pure Clay Anti-Pores Mask giúp làm sạch lỗ chân lông và giảm dầu thừa, mang lại làn da mịn màng hơn.",
+      "highlights": [
+        "se lỗ chân lông",
+        "kiềm dầu",
+        "mịn da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "loreal-hydra-mask",
+    "slug": "hydra-fresh-mask",
+    "brand": "Loreal",
+    "category": "mặt nạ",
+    "type": "hydrating mask",
+
+    "core": {
+      "skin_type": ["da khô"],
+      "ingredients": ["Glycerin", "Vitamin E"],
+      "effects": ["cấp ẩm", "làm dịu"]
+    },
+
+    "display": {
+      "title": "L'Oreal Hydra Fresh Mask",
+      "short_description": "cấp ẩm nhanh",
+      "full_description": "L'Oreal Hydra Fresh Mask giúp cấp ẩm nhanh chóng và làm dịu làn da khô, mang lại cảm giác mềm mịn và căng bóng.",
+      "highlights": [
+        "cấp ẩm",
+        "làm dịu",
+        "mềm da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "loreal-revitalift-mask",
+    "slug": "revitalift-mask",
+    "brand": "Loreal",
+    "category": "mặt nạ",
+    "type": "anti-aging mask",
+
+    "core": {
+      "skin_type": ["da lão hoá"],
+      "ingredients": ["Pro-Retinol", "Hyaluronic Acid"],
+      "effects": ["chống lão hoá", "căng da"]
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift Mask",
+      "short_description": "chống lão hoá",
+      "full_description": "L'Oreal Revitalift Mask giúp cải thiện độ đàn hồi, giảm nếp nhăn và mang lại làn da săn chắc, trẻ trung hơn.",
+      "highlights": [
+        "giảm nếp nhăn",
+        "căng da",
+        "trẻ hoá"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 250000 }
+    ]
+  }
+]

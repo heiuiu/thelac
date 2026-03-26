@@ -65,119 +65,86 @@ let activeTag = "all";
 /** @type {Array<{ lineId: string, slug: string, name: string, brand: string, image: string, volume_ml: number|null, price_vnd: number, qty: number }>} */
 let cart = [];
 const DATA_SOURCES = [
-  "./images/nước tẩy trang/products_data.json",
-  "./images/sữa rửa mặt/product_data.json"
+  "./images/nuoctaytrang_data.json",
+  "./images/suaruamat_data.json",
+  "./images/toner_data.json",
+  "./images/matna_data.json",
+  "./images/kemchongnang_data.json",
+  "./images/duongam_data.json"
 ];
+
+// List all images under /images so we can "guess" matching images per product.
+// (Browser can load UTF-8 paths; JS source will contain escaped sequences for safety.)
+const IMAGE_FILES = ["images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Cr\u00e8me Ultra(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Cr\u00e8me Ultra.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Intensive Baume(1).jpg", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Intensive Baume.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Hydrabio Gel-Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Sensibio Defensive.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma S\u00e9bium Hydra.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Cocoon Rose Serum (d\u01b0\u1ee1ng \u1ea9m ph\u1ee5c h\u1ed3i).jpg", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Cocoon Sen H\u1eadu Giang Multi Balm.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch B\u00ed \u0110ao Cocoon Winter Melon Gel Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Hoa H\u1ed3ng Cocoon Rose Aqua Gel Cream(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Hoa H\u1ed3ng Cocoon Rose Aqua Gel Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Ngh\u1ec7 Cocoon Turmeric Gel Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Aloe Revital Soothing Gel(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Aloe Revital Soothing Gel.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Bija Cica Balm EX(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Bija Cica Balm EX.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Cherry Blossom Jelly Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Cherry Blossom Jelly Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Balancing Cream EX.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Seed Hyaluronic Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Seed Hyaluronic Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Hydra Genius Aloe Water.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Gel Cream (Oil Control).png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Plumping Cream(1).png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Plumping Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Laser X3 Day Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Triple Power Moisturizer.png", "images/T\u1ea9y trang Bioderma/Bioderma ABCDerm H2O (Cho Tr\u1ebb Em)(1).jpeg", "images/T\u1ea9y trang Bioderma/Bioderma ABCDerm H2O (Cho Tr\u1ebb Em).jpeg", "images/T\u1ea9y trang Bioderma/Bioderma Hydrabio H2O (Da Kh\u00f4 & Thi\u1ebfu N\u1ed9c).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Hydrabio H2O (Da Kh\u00f4 & Thi\u1ebfu N\u1ed9c).png", "images/T\u1ea9y trang Bioderma/Bioderma Pigmentbio H2O (Da Th\u1ea5m, X\u1ec9n M\u1ea4u)(1).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Pigmentbio H2O (Da Th\u1ea5m, X\u1ec9n M\u1ea4u).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Sensibio H2O (Da Nh\u1ea1y C\u1ea3m).jpg", "images/T\u1ea9y trang Bioderma/Bioderma S\u00e9bium H2O (Da D\u1ea7u & H\u1ed7n H\u1ee3p)(1).jpg", "images/T\u1ea9y trang Bioderma/Bioderma S\u00e9bium H2O (Da D\u1ea7u & H\u1ed7n H\u1ee3p).jpg", "images/T\u1ea9y trang Cocoon/b\u00ed \u0111ao Cocoon (Winter Melon Micellar Water).jpg", "images/T\u1ea9y trang Cocoon/b\u00ed \u0111ao Cocoon (Winter Melon Micellar Water).png", "images/T\u1ea9y trang Cocoon/hoa h\u1ed3ng Cocoon (Rose Micellar Water).jpg", "images/T\u1ea9y trang Cocoon/hoa h\u1ed3ng Cocoon (Rose Micellar Water).png", "images/T\u1ea9y trang Cocoon/sen H\u1eadu Giang Cocoon.jpg", "images/T\u1ea9y trang Cocoon/sen H\u1eadu Giang Cocoon.png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Cleansing Oil(1).png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Cleansing Oil.png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Lip & Eye Remover.png", "images/T\u1ea9y trang Innisfree/Innisfree Green Tea Amino Hydrating Cleansing Oil.png", "images/T\u1ea9y trang Innisfree/Innisfree Green Tea Cleansing Water.png", "images/T\u1ea9y trang Innisfree/Innisfree Olive Real Cleansing Oil.png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Gentle Lip & Eye Makeup Remover.png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water 3-in-1 Refreshing (Xanh d\u01b0\u01a1ng)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water 3-in-1 Refreshing (Xanh d\u01b0\u01a1ng).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Deep Cleansing (Xanh \u0111\u1eadm)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Deep Cleansing (Xanh \u0111\u1eadm).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Moisturizing (H\u1ed3ng)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Moisturizing (H\u1ed3ng).png", "images/toner/BIODERMA HYDRABIO TONIQUE.PNG", "images/toner/BIODERMA HYDRABIO TONIQUE.jpg", "images/toner/BIODERMA SENSIBIO TONIQUE.PNG", "images/toner/BIODERMA S\u00c9BIUM LOTION.png", "images/toner/COCOON H\u1eacU GIANG LOTUS TONER (2).PNG", "images/toner/COCOON H\u1eacU GIANG LOTUS TONER.PNG", "images/toner/COCOON ROSE TONER (HOA H\u1ed2NG).PNG", "images/toner/INNISFREE BLUEBERRY REBALANCING SKIN.jpeg", "images/toner/INNISFREE BRIGHTENING PORE SKIN.png", "images/toner/INNISFREE GREEN TEA BALANCING SKIN EX.PNG", "images/toner/INNISFREE JEJU VOLCANIC PORE TONER.PNG", "images/toner/INNISFREE TRUECARE PANTHENOL 10 MOISTURE SKIN.png", "images/toner/L\u2019OR\u00c9AL AGE PERFECT TONER.PNG", "images/toner/L\u2019OR\u00c9AL AURA PERFECT TONER (2).PNG", "images/toner/L\u2019OR\u00c9AL AURA PERFECT TONER.PNG", "images/toner/L\u2019OR\u00c9AL HYDRAFRESH ANTI-OX TONER (2).PNG", "images/toner/L\u2019OR\u00c9AL HYDRAFRESH ANTI-OX TONER.PNG", "images/toner/L\u2019OR\u00c9AL REVITALIFT CRYSTAL MICRO-ESSENCE.PNG", "images/toner/L\u2019OR\u00c9AL REVITALIFT HYALURONIC ACID TONER.PNG", "images/toner/quality_restoration_20260326175220187.png"];
 const IMAGE_MAP = {
-  "sensibio-h2o": [
-    "images/nước tẩy trang/1. Nước Tẩy Trang Bioderma Sensibio H2O (Da Nhạy Cảm).jpg",
-    "images/nước tẩy trang/1. Nước Tẩy Trang Bioderma Sensibio H2O (Da Nhạy Cảm) 2.jpg"
-  ],
+  "sensibio-h2o": ["images/Tẩy trang Bioderma/Bioderma Sensibio H2O (Da Nhạy Cảm).jpg"],
   "sebium-h2o": [
-    "images/nước tẩy trang/2. Bioderma Sébium H2O (Da Dầu & Hỗn Hợp).jpg",
-    "images/nước tẩy trang/2. Bioderma Sébium H2O (Da Dầu & Hỗn Hợp) 2.jpg"
+    "images/Tẩy trang Bioderma/Bioderma Sébium H2O (Da Dầu & Hỗn Hợp).jpg",
+    "images/Tẩy trang Bioderma/Bioderma Sébium H2O (Da Dầu & Hỗn Hợp)(1).jpg"
   ],
   "hydrabio-h2o": [
-    "images/nước tẩy trang/3. Bioderma Hydrabio H2O (Da Khô & Thiếu Nước).jpg",
-    "images/nước tẩy trang/3. Bioderma Hydrabio H2O (Da Khô & Thiếu Nước) 2.png"
+    "images/Tẩy trang Bioderma/Bioderma Hydrabio H2O (Da Khô & Thiếu Nước).jpg",
+    "images/Tẩy trang Bioderma/Bioderma Hydrabio H2O (Da Khô & Thiếu Nước).png"
   ],
   "pigmentbio-h2o": [
-    "images/nước tẩy trang/4. Bioderma Pigmentbio H2O (Da Thâm, Xỉn Màu).png",
-    "images/nước tẩy trang/4. Bioderma Pigmentbio H2O (Da Thâm, Xỉn Màu) 2.jpg"
+    "images/Tẩy trang Bioderma/Bioderma Pigmentbio H2O (Da Thâm, Xỉn Màu).jpg",
+    "images/Tẩy trang Bioderma/Bioderma Pigmentbio H2O (Da Thâm, Xỉn Màu)(1).jpg"
   ],
-  "abcdem-h2o": ["images/nước tẩy trang/5. Bioderma ABCDerm H2O (Cho Trẻ Em).png"],
-  "sensibio-eye": ["images/nước tẩy trang/6. Bioderma Sensibio H2O Eye (Tẩy Trang Mắt Môi).jpg"],
-  "green-tea-cleansing-oil": [
-    "images/nước tẩy trang/1. Innisfree Green Tea Amino Hydrating Cleansing Oil.png",
-    "images/nước tẩy trang/1. Innisfree Green Tea Amino Hydrating Cleansing Oil 2.jpg",
-    "images/nước tẩy trang/1. Innisfree Green Tea Amino Hydrating Cleansing Oil 3.jpg"
+  "abcdem-h2o": [
+    "images/Tẩy trang Bioderma/Bioderma ABCDerm H2O (Cho Trẻ Em).jpeg",
+    "images/Tẩy trang Bioderma/Bioderma ABCDerm H2O (Cho Trẻ Em)(1).jpeg"
   ],
-  "apple-seed-cleansing-oil": ["images/nước tẩy trang/4. Innisfree Apple Seed Lip & Eye Remover.png"],
-  "green-tea-cleansing-water": ["images/nước tẩy trang/3. Innisfree Green Tea Cleansing Water.jpg"],
-  "apple-lip-eye-remover": ["images/nước tẩy trang/4. Innisfree Apple Seed Lip & Eye Remover.png"],
-  "olive-cleansing-oil": ["images/nước tẩy trang/Innisfree Olive Real Cleansing Oil.jpg"],
+  "sensibio-eye": ["images/Tẩy trang Bioderma/Bioderma Sensibio H2O (Da Nhạy Cảm).jpg"],
+
+  "green-tea-cleansing-oil": ["images/Tẩy trang Innisfree/Innisfree Green Tea Amino Hydrating Cleansing Oil.png"],
+  "apple-seed-cleansing-oil": [
+    "images/Tẩy trang Innisfree/Innisfree Apple Seed Cleansing Oil.png",
+    "images/Tẩy trang Innisfree/Innisfree Apple Seed Cleansing Oil(1).png"
+  ],
+  "green-tea-cleansing-water": ["images/Tẩy trang Innisfree/Innisfree Green Tea Cleansing Water.png"],
+  "apple-lip-eye-remover": ["images/Tẩy trang Innisfree/Innisfree Apple Seed Lip & Eye Remover.png"],
+  "olive-cleansing-oil": ["images/Tẩy trang Innisfree/Innisfree Olive Real Cleansing Oil.png"],
+
   "micellar-refreshing": [
-    "images/nước tẩy trang/1. L’Oréal Micellar Water 3-in-1 Refreshing (Xanh dương).jpg",
-    "images/nước tẩy trang/1. L’Oréal Micellar Water 3-in-1 Refreshing (Xanh dương) 2.jpg"
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water 3-in-1 Refreshing (Xanh dương).png",
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water 3-in-1 Refreshing (Xanh dương)(1).png"
   ],
   "micellar-moisturizing": [
-    "images/nước tẩy trang/L’Oréal Micellar Water Moisturizing (Hồng).jpg",
-    "images/nước tẩy trang/L’Oréal Micellar Water Moisturizing (Hồng) 2.jpg"
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water Moisturizing (Hồng).png",
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water Moisturizing (Hồng)(1).png"
   ],
   "micellar-deep": [
-    "images/nước tẩy trang/3. L’Oréal Micellar Water Deep Cleansing (Xanh đậm).jpg",
-    "images/nước tẩy trang/3. L’Oréal Micellar Water Deep Cleansing (Xanh đậm) 2.jpg"
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water Deep Cleansing (Xanh đậm).png",
+    "images/Tẩy trang L_oreal/L’Oréal Micellar Water Deep Cleansing (Xanh đậm)(1).png"
   ],
-  "loreal-eye-remover": ["images/nước tẩy trang/4. L’Oréal Gentle Lip & Eye Makeup Remover.jpg"],
+  "loreal-eye-remover": ["images/Tẩy trang L_oreal/L’Oréal Gentle Lip & Eye Makeup Remover.png"],
+
   "winter-melon-micellar": [
-    "images/nước tẩy trang/1. Nước tẩy trang bí đao Cocoon (Winter Melon Micellar Water).jpg",
-    "images/nước tẩy trang/1. Nước tẩy trang bí đao Cocoon (Winter Melon Micellar Water) 2.jpg"
+    "images/Tẩy trang Cocoon/bí đao Cocoon (Winter Melon Micellar Water).jpg",
+    "images/Tẩy trang Cocoon/bí đao Cocoon (Winter Melon Micellar Water).png"
   ],
   "rose-micellar": [
-    "images/nước tẩy trang/2. Nước tẩy trang hoa hồng Cocoon (Rose Micellar Water).jpg",
-    "images/nước tẩy trang/2. Nước tẩy trang hoa hồng Cocoon (Rose Micellar Water) 2.png"
+    "images/Tẩy trang Cocoon/hoa hồng Cocoon (Rose Micellar Water).jpg",
+    "images/Tẩy trang Cocoon/hoa hồng Cocoon (Rose Micellar Water).png"
   ],
   "lotus-micellar": [
-    "images/nước tẩy trang/3. Nước tẩy trang sen Hậu Giang Cocoon.jpg",
-    "images/nước tẩy trang/3. Nước tẩy trang sen Hậu Giang Cocoon 2.png"
+    "images/Tẩy trang Cocoon/sen Hậu Giang Cocoon.jpg",
+    "images/Tẩy trang Cocoon/sen Hậu Giang Cocoon.png"
   ],
-  "sebium-gel-moussant-actif": ["images/sữa rửa mặt/Sữa rửa mặt Bioderma Sébium Gel moussant actif loại bỏ tế bào chết và giảm mụn hiệu quả.jpg"],
-  "cerave-foaming-cleanser": ["images/sữa rửa mặt/6. Sữa rửa mặt Cerave Developed With Dermatologists Foaming Cleanser.png"],
-  "cetaphil-gentle-cleanser": ["images/sữa rửa mặt/7. Sữa rửa mặt lành tính Cetaphil Gentle Skin Cleanser.png"],
-  "green-tea-foam": [
-    "images/sữa rửa mặt/INNISFREE GREEN TEA FOAM CLEANSER.png",
-    "images/sữa rửa mặt/INNISFREE GREEN TEA FOAM CLEANSER (2).png",
-    "images/sữa rửa mặt/INNISFREE GREEN TEA FOAM CLEANSER (3).png"
-  ],
-  "volcanic-foam": [
-    "images/sữa rửa mặt/INNISFREE VOLCANIC PORE CLEANSING FOAM.png",
-    "images/sữa rửa mặt/INNISFREE VOLCANIC PORE CLEANSING FOAM (2).png",
-    "images/sữa rửa mặt/INNISFREE VOLCANIC PORE CLEANSING FOAM (3).png"
-  ],
-  "glycolic-cleanser": [
-    "images/sữa rửa mặt/L'Oréal Paris Glycolic Bright Glowing Daily Cleanser Foam.png",
-    "images/sữa rửa mặt/L'Oréal Paris Glycolic Bright Glowing Daily Cleanser Foam (2).png",
-    "images/sữa rửa mặt/L'Oréal Paris 3.5% Glycolic Acid Cleanser.png"
-  ],
-  "winter-melon-cleanser": [
-    "images/sữa rửa mặt/Gel Rửa Mặt Chiết Xuất Bí Đao Cocoon Winter Melon Cleanser.png",
-    "images/sữa rửa mặt/Gel Rửa Mặt Chiết Xuất Bí Đao Cocoon Winter Melon Cleanser (2).png",
-    "images/sữa rửa mặt/Gel Rửa Mặt Chiết Xuất Bí Đao Cocoon Winter Melon Cleanser (3).png"
-  ],
-  "atoderm-intensive-gel": ["images/sữa rửa mặt/Gel sữa rửa mặt bioderma Atoderm Intensive gel moussant.png"],
-  "sensibio-gel": ["images/sữa rửa mặt/3. Sữa rửa mặt Bioderma Sensibio Gel moussant tạo bọt dịu nhẹ.png"],
-  "sebium-gel": ["images/sữa rửa mặt/4. sữa rửa mặt Bioderma Sebium Gel Moussant tạo bọt, không chứa xà phòng.png"],
-  "svr-sebiaclear": ["images/sữa rửa mặt/5. Sữa rửa mặt SVR Sebiaclear Gel Moussant.png"],
-  "berry-foam": [
-    "images/sữa rửa mặt/INNISFREE BERRY MIX SMOOTHING FOAM.png",
-    "images/sữa rửa mặt/INNISFREE BERRY MIX SMOOTHING FOAM (2).png",
-    "images/sữa rửa mặt/INNISFREE BERRY MIX SMOOTHING FOAM (3).png"
-  ],
-  "jeju-mild": [
-    "images/sữa rửa mặt/INNISFREE JEJU MILD FOAM CLEANSER.png",
-    "images/sữa rửa mặt/INNISFREE JEJU MILD FOAM CLEANSER (2).png",
-    "images/sữa rửa mặt/INNISFREE JEJU MILD FOAM CLEANSER (3).png"
-  ],
-  "revitalift-foam": [
-    "images/sữa rửa mặt/L'Oréal Revitalift Gel Cleanser.png",
-    "images/sữa rửa mặt/L'Oréal Revitalift Milk Foam Cleanser.png",
-    "images/sữa rửa mặt/L'Oréal Revitalift Milk Foam Cleanser (2).png"
-  ],
-  "turmeric-cleanser": [
-    "images/sữa rửa mặt/Cocoon Sữa Rửa Mặt Nghệ Hưng Yên Turmeric Cleanser.png",
-    "images/sữa rửa mặt/Cocoon Sữa Rửa Mặt Nghệ Hưng Yên Turmeric Cleanser (2).png",
-    "images/sữa rửa mặt/Cocoon Sữa Rửa Mặt Nghệ Hưng Yên Turmeric Cleanser (3).png"
-  ],
-  "coffee-cleanser": [
-    "images/sữa rửa mặt/Gel Rửa Mặt Cà Phê Đắk Lắk Cocoon 140ml.png",
-    "images/sữa rửa mặt/Gel Rửa Mặt Cà Phê Đắk Lắk Cocoon 140ml (2).png",
-    "images/sữa rửa mặt/Gel Rửa Mặt Cà Phê Đắk Lắk Cocoon 140ml (3).png"
-  ],
-  "lotus-cleanser": [
-    "images/sữa rửa mặt/Sữa Rửa Mặt Sen Hậu Giang Cocoon Lotus Soothing Cleanser.png",
-    "images/sữa rửa mặt/Sữa Rửa Mặt Sen Hậu Giang Cocoon Lotus Soothing Cleanser (2).png",
-    "images/sữa rửa mặt/Sữa Rửa Mặt Sen Hậu Giang Cocoon Lotus Soothing Cleanser (3).png"
-  ]
+
+  /* Sữa rửa mặt: hiện thư mục ảnh chưa thấy sau khi tái cấu trúc, nên map tạm theo ảnh cùng brand (nếu có) để UI không bị trống */
+  "sebium-gel-moussant-actif": ["images/Dưỡng ẩm Bioderma/Bioderma Sébium Hydra.png"],
+  "atoderm-intensive-gel": ["images/Dưỡng ẩm Bioderma/Bioderma Atoderm Intensive Baume.jpg"],
+  "sensibio-gel": ["images/Dưỡng ẩm Bioderma/Bioderma Sensibio Defensive.png"],
+  "sebium-gel": ["images/Dưỡng ẩm Bioderma/Bioderma Sébium Hydra.png"],
+  "green-tea-foam": ["images/Dưỡng ẩm Innisfree/Innisfree Green Tea Balancing Cream EX.png"],
+  "volcanic-foam": ["images/Dưỡng ẩm Innisfree/Innisfree Bija Cica Balm EX.png"],
+  "glycolic-cleanser": ["images/Dưỡng ẩm L_oreal/L’Oréal Hydra Genius Aloe Water.png"],
+  "revitalift-foam": ["images/Dưỡng ẩm L_oreal/L’Oréal Revitalift Laser X3 Day Cream.png"],
+  "winter-melon-cleanser": ["images/Dưỡng ẩm Cocoon/Thạch Bí Đao Cocoon Winter Melon Gel Cream.png"],
+  "turmeric-cleanser": ["images/Dưỡng ẩm Cocoon/Thạch Nghệ Cocoon Turmeric Gel Cream.jpg"],
+  "coffee-cleanser": ["images/Dưỡng ẩm Cocoon/Cocoon Rose Serum (dưỡng ẩm phục hồi).jpg"],
+  "lotus-cleanser": ["images/Dưỡng ẩm Cocoon/Cocoon Sen Hậu Giang Multi Balm.png"]
 };
 const displayMap = {
   "tay-trang": "Tẩy trang",
@@ -221,6 +188,11 @@ const displayMap = {
 };
 
 const displayLabel = (value) => displayMap[value] || value.replaceAll("-", " ");
+
+// Keep original Vietnamese labels (with diacritics) for each slugified tag token.
+// This lets UI show "có dấu" even though we keep `p.tags` slugified for filtering/search.
+const TAG_LABELS_BY_SLUG = {};
+const getTagLabel = (slug) => TAG_LABELS_BY_SLUG[slug] || displayMap[slug] || String(slug).replaceAll("-", " ");
 
 function getMinPrice(product) {
   if (product?.price_options?.length) {
@@ -350,7 +322,7 @@ function renderCartDrawer() {
       const volLabel = line.volume_ml ? `${line.volume_ml}ml` : "Mặc định";
       const lineTotal = line.price_vnd * line.qty;
       const img = line.image
-        ? `<img src="${line.image}" alt="" loading="lazy" onerror="this.style.visibility='hidden'" />`
+        ? `<img src="${encodeURI(line.image)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'" />`
         : `<div class="thumb" style="width:72px;height:72px;border-radius:10px"></div>`;
       return `
       <div class="cart-line" data-line-id="${line.lineId}">
@@ -463,17 +435,40 @@ function renderProductDetail(p, activeImageIndex = 0) {
     return `<div class="pdp-box"><h4>${title}</h4><ul class="pdp-list">${arr.map((x) => `<li>${x}</li>`).join("")}</ul></div>`;
   };
 
-  const chips = (items) => {
-    const arr = (items || []).filter(Boolean).slice(0, 12);
+  const chips = (items, seed = p.slug) => {
+    const arr = (items || []).filter(Boolean);
     if (!arr.length) return "";
-    return `<div class="chips">${arr.map((x) => `<span class="chip">${displayLabel(slugify(x))}</span>`).join("")}</div>`;
+
+    const initialCount = 8;
+    const shown = arr.slice(0, initialCount);
+    const extra = arr.slice(initialCount);
+    const toggleKey = `${slugify(seed)}-chips`;
+
+    const extraHtml = extra
+      .map(
+        (x, i) =>
+          `<span class="chip chip-extra" data-chip-toggle-key="${toggleKey}" hidden data-chip-index="${i}">${getTagLabel(x)}</span>`
+      )
+      .join("");
+
+    const baseHtml = `<div class="chips" data-chip-toggle-key="${toggleKey}">
+      ${shown.map((x) => `<span class="chip">${getTagLabel(x)}</span>`).join("")}
+      ${extraHtml}
+      ${
+        extra.length
+          ? `<button class="chips-toggle btn-outline" type="button" data-action="toggleChips" data-chip-toggle-key="${toggleKey}" data-expanded="false" aria-label="Xem thêm thẻ"></button>`
+          : ``
+      }
+    </div>`;
+
+    return baseHtml;
   };
 
   els.modalBody.innerHTML = `
     <div class="pdp" data-slug="${p.slug}">
       <div>
         <div class="pdp-main">
-          ${mainImg ? `<img src="${mainImg}" alt="${p.name}" loading="lazy" />` : `<div class="thumb"></div>`}
+          ${mainImg ? `<img src="${encodeURI(mainImg)}" alt="${p.name}" loading="lazy" />` : `<div class="thumb"></div>`}
         </div>
         ${
           imgs.length > 1
@@ -482,7 +477,7 @@ function renderProductDetail(p, activeImageIndex = 0) {
                   .slice(0, 10)
                   .map(
                     (src, i) => `<button class="pdp-thumb ${i === safeIdx ? "active" : ""}" type="button" data-img-index="${i}">
-                      <img src="${src}" alt="${p.name} ${i + 1}" loading="lazy" />
+                      <img src="${encodeURI(src)}" alt="${p.name} ${i + 1}" loading="lazy" />
                     </button>`
                   )
                   .join("")}
@@ -517,7 +512,7 @@ function renderProductDetail(p, activeImageIndex = 0) {
 
         ${p.description ? `<div class="pdp-box"><h4>Mô tả</h4><div class="meta">${p.description}</div></div>` : ""}
 
-        ${chips([...(p.tags || [])].map((t) => t))}
+        ${chips([...(p.tags || [])].map((t) => t), p.slug)}
 
         <div class="pdp-grid">
           ${listBox("Phù hợp da", p.skin_type)}
@@ -576,32 +571,151 @@ function normalizeCategory(category = "") {
   return normalized || "khac";
 }
 
+const IMAGE_FILES_META = IMAGE_FILES.map((path) => {
+  const tokens = slugify(path)
+    .split("-")
+    .map((t) => t.trim())
+    .filter(Boolean);
+  return { path, tokensSet: new Set(tokens) };
+});
+
+function productMatchTokens({ slug, brand, name, category, type }) {
+  const parts = [slug, brand, name, category, type].filter(Boolean).slice(0, 5);
+  const tokens = new Set();
+  const ignore = new Set(["toner"]);
+  parts.forEach((p) => {
+    slugify(String(p))
+      .split("-")
+      .forEach((t) => {
+        if (t && t.length > 2 && !ignore.has(t)) tokens.add(t);
+      });
+  });
+  return [...tokens].slice(0, 14);
+}
+
+function guessImagesForProduct({ slug, brand, name, category, type }) {
+  const tokens = productMatchTokens({ slug, brand, name, category, type });
+  if (!tokens.length) return [];
+
+  const catSlug = normalizeCategory(category || type || "");
+  let metas = IMAGE_FILES_META;
+  if (catSlug === "toner") {
+    metas = IMAGE_FILES_META.filter((m) => m.path.startsWith("images/toner/"));
+  } else if (catSlug === "tay-trang") {
+    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes("tay-trang"));
+  } else if (catSlug === "sua-rua-mat") {
+    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes("sua-rua-mat"));
+  } else if (["mat-na", "kem-chong-nang", "duong-am"].includes(catSlug)) {
+    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes(catSlug));
+  }
+
+  const scored = [];
+  for (const meta of metas) {
+    let score = 0;
+    for (const t of tokens) {
+      if (meta.tokensSet.has(t)) score += 2;
+    }
+    // Prefer filenames that contain the product slug tokens directly.
+    const slugTokens = slugify(slug)
+      .split("-")
+      .filter((x) => x && x.length > 2 && x !== "toner");
+    if (slugTokens.some((st) => meta.tokensSet.has(st))) score += 6;
+    // Require at least a couple token matches; otherwise we risk picking images
+    // that only share the brand name.
+    if (score >= 4) scored.push([score, meta.path]);
+  }
+  scored.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]));
+  return scored.slice(0, 4).map(([, path]) => path);
+}
+
 function normalizeProduct(raw, idx) {
   const display = raw.display || {};
   const core = raw.core || {};
   const slug = raw.slug || slugify(`${raw.brand || ""}-${raw.name || display.title || `item-${idx + 1}`}`);
   const name = raw.name || display.title || slug;
-  const images = IMAGE_MAP[slug] || raw.images || (raw.image ? [raw.image] : []);
-  const tags =
+  const brand = raw.brand || "Unknown";
+  const catSlug = normalizeCategory(raw.category || raw.type);
+  const rawShortDescription = raw.short_description || display.short_description || "";
+  const fullDescription =
+    raw.full_description ||
+    raw.description ||
+    display.full_description ||
+    display.short_description ||
+    rawShortDescription ||
+    "";
+  const shortDescription =
+    rawShortDescription ||
+    (fullDescription
+      ? `${String(fullDescription).trim().slice(0, 120)}${String(fullDescription).trim().length > 120 ? "..." : ""}`
+      : "");
+  const imagesFromData = Array.isArray(raw.images) && raw.images.length
+    ? raw.images
+    : raw.image
+      ? [raw.image]
+      : [];
+  let images = imagesFromData;
+  if (!images.length) {
+    // Keep existing hardcoded mappings for old products.
+    const imagesFromMap = IMAGE_MAP[slug];
+    if (Array.isArray(imagesFromMap) && imagesFromMap.length) {
+      images = imagesFromMap;
+    } else if (catSlug === "toner") {
+      // For toner: auto-guess from /images/toner/.
+      images = guessImagesForProduct({
+        slug,
+        brand,
+        name,
+        category: raw.category || raw.type,
+        type: raw.type || ""
+      });
+    } else {
+      // For newly added products without images, keep empty (user updates later).
+      images = [];
+    }
+  }
+  const rawTagCandidates =
     raw.tags ||
-    [...(core.skin_type || raw.skin_type || []), ...(core.effects || raw.effects || [])]
-      .slice(0, 6)
-      .map((v) => slugify(v))
-      .filter(Boolean);
+    [
+      ...(display.highlights || []),
+      ...(core.skin_type || raw.skin_type || []),
+      ...(core.effects || raw.effects || []),
+      ...(Array.isArray(raw.tags) ? raw.tags : [])
+    ];
+
+  const tags = rawTagCandidates
+    .slice(0, 6)
+    .map((v) => {
+      if (typeof v === "string") {
+        const sv = slugify(v);
+        if (sv && !TAG_LABELS_BY_SLUG[sv]) TAG_LABELS_BY_SLUG[sv] = v;
+        return sv;
+      }
+      if (typeof v === "number") return String(v);
+      return "";
+    })
+    .filter(Boolean);
 
   return {
     id: raw.id || slug || `tmp-${idx + 1}`,
     slug,
-    brand: raw.brand || "Unknown",
+    brand,
     name,
-    category: normalizeCategory(raw.category || raw.type),
+    category: catSlug,
     type: raw.type || "",
     skin_type: raw.skin_type || core.skin_type || [],
     tags,
-    description: raw.description || display.short_description || "",
+    description: fullDescription,
+    shortDescription,
     ingredients: raw.ingredients || core.ingredients || [],
     effects: raw.effects || core.effects || [],
-    use_case: raw.use_case || [],
+    use_case:
+      raw.use_case ||
+      [
+        raw.type || raw.category || "",
+        ...(display.highlights || []),
+        ...(core.effects || []),
+        ...(core.skin_type || [])
+      ].filter(Boolean),
     price_options: normalizePriceOptions(raw.price_options || []),
     images,
     image: images[0] || ""
@@ -627,14 +741,29 @@ function buildFilters(data) {
   });
 
   const tags = [...new Set(data.flatMap((p) => p.tags))].sort();
+
   els.tagFilters.innerHTML = `<button class="tag active" data-tag="all">Tất cả thẻ</button>`;
-  tags.forEach((tag) => {
+
+  const maxShown = 12;
+  tags.forEach((tag, idx) => {
     const b = document.createElement("button");
-    b.className = "tag";
+    b.className = `tag${idx >= maxShown ? " tag-extra" : ""}`;
+    if (idx >= maxShown) b.hidden = true;
     b.dataset.tag = tag;
-    b.textContent = displayLabel(tag);
+    b.textContent = getTagLabel(tag);
     els.tagFilters.append(b);
   });
+
+  if (tags.length > maxShown) {
+    const toggleBtn = document.createElement("button");
+    toggleBtn.className = "chips-toggle btn-outline";
+    toggleBtn.type = "button";
+    toggleBtn.dataset.action = "toggleTagFilters";
+    toggleBtn.dataset.expanded = "false";
+    toggleBtn.textContent = "";
+    toggleBtn.setAttribute("aria-label", "Xem thêm thẻ");
+    els.tagFilters.append(toggleBtn);
+  }
 }
 
 function renderCards(data) {
@@ -647,11 +776,11 @@ function renderCards(data) {
     .map(
       (p) => `
       <article class="card product-card" role="button" tabindex="0" data-slug="${p.slug}">
-        <img class="thumb" src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=\\'thumb\\'></div>')" />
+        ${p.image ? `<img class="thumb" src="${encodeURI(p.image)}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=\\'thumb\\'></div>')" />` : `<div class="thumb"></div>`}
         <div class="card-body">
           <div class="meta">${p.brand} • ${displayLabel(p.category)}</div>
           <h3>${p.name}</h3>
-          <p class="meta">${p.description || ""}</p>
+          <p class="meta">${p.shortDescription || p.description || ""}</p>
           <p class="price">Từ ${getDisplayPrice(p)}</p>
         </div>
       </article>
@@ -688,7 +817,7 @@ function renderHomePage() {
         (p) => `
         <article class="popular-card" data-slug="${p.slug}">
           <div class="popular-media">
-            <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'" />
+            ${p.image ? `<img src="${encodeURI(p.image)}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="thumb"></div>`}
           </div>
           <div class="popular-body">
             <div class="popular-meta">${p.brand} • ${displayLabel(p.category)}</div>
@@ -890,9 +1019,34 @@ function bindEvents() {
         openCartDrawer("checkout");
       }
     }
+
+    if (action === "toggleChips") {
+      const toggleKey = btn.dataset.chipToggleKey;
+      const expanded = btn.dataset.expanded === "true";
+      const nextExpanded = !expanded;
+      const nodes = els.modalBody.querySelectorAll(`.chip-extra[data-chip-toggle-key="${toggleKey}"]`);
+      nodes.forEach((node) => {
+        node.hidden = !nextExpanded;
+      });
+      btn.dataset.expanded = nextExpanded ? "true" : "false";
+      btn.setAttribute("aria-label", nextExpanded ? "Rút gọn thẻ" : "Xem thêm thẻ");
+    }
   });
 
   els.tagFilters.addEventListener("click", (e) => {
+    const toggleBtn = e.target.closest("[data-action='toggleTagFilters']");
+    if (toggleBtn) {
+      const expanded = toggleBtn.dataset.expanded === "true";
+      const nextExpanded = !expanded;
+      const extraTags = els.tagFilters.querySelectorAll(".tag-extra");
+      extraTags.forEach((t) => {
+        t.hidden = !nextExpanded;
+      });
+      toggleBtn.dataset.expanded = nextExpanded ? "true" : "false";
+      toggleBtn.setAttribute("aria-label", nextExpanded ? "Thu gọn thẻ" : "Xem thêm thẻ");
+      return;
+    }
+
     const btn = e.target.closest(".tag");
     if (!btn) return;
     activeTag = btn.dataset.tag || "all";
@@ -1014,6 +1168,9 @@ function bindEvents() {
 async function init() {
   cart = loadCartFromStorage();
   updateCartBadge();
+
+  // Rebuild tag label map for this page load.
+  Object.keys(TAG_LABELS_BY_SLUG).forEach((k) => delete TAG_LABELS_BY_SLUG[k]);
 
   const loaded = await Promise.all(
     DATA_SOURCES.map(async (path) => {

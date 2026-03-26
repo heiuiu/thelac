@@ -1,0 +1,593 @@
+[
+  {
+    "id": "bioderma-atoderm-intensive-baume",
+    "slug": "atoderm-intensive-baume",
+    "brand": "Bioderma",
+    "category": "dưỡng ẩm",
+    "type": "repair balm",
+
+    "core": {
+      "skin_type": ["da rất khô", "da nhạy cảm", "eczema"],
+      "ingredients": ["Niacinamide", "Ceramide-like", "PEA", "Glycerin"],
+      "effects": ["phục hồi", "giảm ngứa", "dưỡng ẩm sâu"],
+      "finish": "dày"
+    },
+
+    "display": {
+      "title": "Bioderma Atoderm Intensive Baume",
+      "short_description": "phục hồi da rất khô",
+      "full_description": "Bioderma Atoderm Intensive Baume là kem dưỡng chuyên sâu giúp phục hồi hàng rào bảo vệ da, giảm nhanh tình trạng ngứa và kích ứng. Công thức giàu lipid và hoạt chất phục hồi giúp cải thiện da khô nặng, eczema và da sau treatment mạnh, mang lại làn da mềm mại và khỏe hơn.",
+      "highlights": [
+        "phục hồi mạnh",
+        "giảm ngứa",
+        "dưỡng sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "75ml", "price": 250000 },
+      { "size": "200ml", "price": 350000 },
+      { "size": "500ml", "price": 600000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-atoderm-creme",
+    "slug": "atoderm-creme-ultra",
+    "brand": "Bioderma",
+    "category": "dưỡng ẩm",
+    "type": "basic moisturizer",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "ingredients": ["Niacinamide", "Glycerin"],
+      "effects": ["dưỡng ẩm", "làm mềm"]
+    },
+
+    "display": {
+      "title": "Bioderma Atoderm Crème Ultra",
+      "short_description": "dưỡng ẩm cơ bản",
+      "full_description": "Bioderma Atoderm Crème Ultra giúp duy trì độ ẩm tự nhiên và làm mềm da, phù hợp dùng hằng ngày cho da khô và da nhạy cảm. Công thức lành tính giúp tăng sức đề kháng cho da.",
+      "highlights": [
+        "dưỡng ẩm ổn định",
+        "dùng mặt + body",
+        "ít kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 350000 },
+      { "size": "500ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sebium-hydra",
+    "slug": "sebium-hydra",
+    "brand": "Bioderma",
+    "category": "dưỡng ẩm",
+    "type": "acne moisturizer",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn", "da treatment"],
+      "ingredients": ["Ceramide-like", "Glycerin", "Enoxolone"],
+      "effects": ["cấp ẩm", "giảm kích ứng", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Bioderma Sébium Hydra",
+      "short_description": "dưỡng ẩm cho da mụn treatment",
+      "full_description": "Bioderma Sébium Hydra là kem dưỡng dành riêng cho da mụn đang treatment, giúp cấp ẩm, giảm bong tróc và phục hồi da mà không gây bít tắc. Sản phẩm giúp da cân bằng hơn khi dùng BHA hoặc retinol.",
+      "highlights": [
+        "không gây bí",
+        "giảm bong tróc",
+        "phục hồi da mụn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-hydrabio-gel",
+    "slug": "hydrabio-gel-cream",
+    "brand": "Bioderma",
+    "category": "dưỡng ẩm",
+    "type": "gel moisturizer",
+
+    "core": {
+      "skin_type": ["da thiếu nước", "da hỗn hợp"],
+      "ingredients": ["Hyaluronic Acid", "Vitamin E"],
+      "effects": ["cấp nước", "làm mịn"]
+    },
+
+    "display": {
+      "title": "Bioderma Hydrabio Gel-Cream",
+      "short_description": "cấp nước nhẹ",
+      "full_description": "Bioderma Hydrabio Gel-Cream giúp cấp nước nhanh và duy trì độ ẩm lâu dài mà không gây nhờn rít. Phù hợp cho da thiếu nước cần dưỡng nhẹ.",
+      "highlights": [
+        "cấp nước",
+        "nhẹ",
+        "không bí"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sensibio-defensive",
+    "slug": "sensibio-defensive",
+    "brand": "Bioderma",
+    "category": "dưỡng ẩm",
+    "type": "soothing moisturizer",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "ingredients": ["Vitamin E", "Polyphenols"],
+      "effects": ["làm dịu", "bảo vệ da"]
+    },
+
+    "display": {
+      "title": "Bioderma Sensibio Defensive",
+      "short_description": "bảo vệ da nhạy cảm",
+      "full_description": "Bioderma Sensibio Defensive giúp làm dịu da nhạy cảm, tăng khả năng chống chịu trước môi trường và giảm kích ứng. Phù hợp cho da yếu lâu dài.",
+      "highlights": [
+        "làm dịu",
+        "bảo vệ da",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-green-tea-ha-cream",
+    "slug": "green-tea-ha-cream",
+    "brand": "Innisfree",
+    "category": "dưỡng ẩm",
+    "type": "hydrating cream",
+
+    "core": {
+      "skin_type": ["da thường", "da hỗn hợp"],
+      "ingredients": ["Green Tea", "Hyaluronic Acid", "Panthenol"],
+      "effects": ["cấp ẩm", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Seed Hyaluronic Cream",
+      "short_description": "cấp ẩm đa tầng",
+      "full_description": "Innisfree Green Tea Seed Hyaluronic Cream giúp cấp nước sâu nhiều tầng và duy trì độ ẩm lâu dài nhờ trà xanh Jeju và HA. Sản phẩm giúp da mềm mịn và căng bóng hơn.",
+      "highlights": [
+        "cấp ẩm sâu",
+        "căng bóng",
+        "không bí"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 500000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-bija-cica",
+    "slug": "bija-cica-balm",
+    "brand": "Innisfree",
+    "category": "dưỡng ẩm",
+    "type": "cica balm",
+
+    "core": {
+      "skin_type": ["da mụn", "da nhạy cảm"],
+      "ingredients": ["Centella", "Panthenol"],
+      "effects": ["giảm viêm", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Innisfree Bija Cica Balm EX",
+      "short_description": "phục hồi da mụn",
+      "full_description": "Innisfree Bija Cica Balm EX giúp làm dịu, giảm viêm và phục hồi da mụn hiệu quả. Phù hợp cho da đang treatment hoặc dễ kích ứng.",
+      "highlights": [
+        "giảm viêm",
+        "phục hồi",
+        "không bí"
+      ]
+    },
+
+    "price_options": [
+      { "size": "40ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-cherry-blossom",
+    "slug": "cherry-blossom-jelly",
+    "brand": "Innisfree",
+    "category": "dưỡng ẩm",
+    "type": "gel cream",
+
+    "core": {
+      "skin_type": ["da dầu", "da xỉn màu"],
+      "ingredients": ["Niacinamide"],
+      "effects": ["cấp nước", "làm sáng"]
+    },
+
+    "display": {
+      "title": "Innisfree Cherry Blossom Jelly Cream",
+      "short_description": "cấp nước + sáng da",
+      "full_description": "Innisfree Cherry Blossom Jelly Cream giúp cấp nước và làm sáng da nhẹ, mang lại hiệu ứng da căng bóng và tươi tắn.",
+      "highlights": [
+        "căng bóng",
+        "làm sáng",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-aloe-gel",
+    "slug": "aloe-revital-gel",
+    "brand": "Innisfree",
+    "category": "dưỡng ẩm",
+    "type": "soothing gel",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "ingredients": ["Aloe", "Panthenol"],
+      "effects": ["cấp nước", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Innisfree Aloe Revital Soothing Gel",
+      "short_description": "cấp nước nhanh",
+      "full_description": "Innisfree Aloe Gel giúp cấp nước nhanh và làm dịu da kích ứng, phù hợp dùng đa năng cho mặt và body.",
+      "highlights": [
+        "đa năng",
+        "mát da",
+        "thấm nhanh"
+      ]
+    },
+
+    "price_options": [
+      { "size": "300ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-green-tea-balancing",
+    "slug": "green-tea-balancing-cream",
+    "brand": "Innisfree",
+    "category": "dưỡng ẩm",
+    "type": "balancing cream",
+
+    "core": {
+      "skin_type": ["da hỗn hợp", "da dầu"],
+      "ingredients": ["Green Tea"],
+      "effects": ["cân bằng", "cấp ẩm"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Balancing Cream EX",
+      "short_description": "cân bằng dầu nước",
+      "full_description": "Innisfree Green Tea Balancing Cream giúp cân bằng dầu và độ ẩm trên da, phù hợp cho routine cơ bản hằng ngày.",
+      "highlights": [
+        "cân bằng da",
+        "nhẹ",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 300000 }
+    ]
+  }
+]
+
+[
+  {
+    "id": "loreal-revitalift-ha-cream",
+    "slug": "revitalift-ha-plumping",
+    "brand": "Loreal",
+    "category": "dưỡng ẩm",
+    "type": "anti-aging moisturizer",
+
+    "core": {
+      "skin_type": ["da khô", "da thiếu nước", "da lão hoá"],
+      "ingredients": ["Hyaluronic Acid", "Glycerin", "Adenosine"],
+      "effects": ["cấp ẩm", "căng da", "giảm nếp nhăn"],
+      "finish": "ẩm"
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift Hyaluronic Acid Plumping Cream",
+      "short_description": "cấp ẩm + căng da",
+      "full_description": "L'Oreal Revitalift HA Cream giúp cấp ẩm sâu, làm căng da và cải thiện nếp nhăn nhờ Hyaluronic Acid. Sản phẩm mang lại hiệu ứng da căng bóng rõ rệt và phù hợp cho da thiếu ẩm hoặc bắt đầu lão hóa.",
+      "highlights": [
+        "căng da",
+        "giảm nếp nhăn",
+        "dưỡng sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "loreal-hydra-genius",
+    "slug": "hydra-genius-aloe",
+    "brand": "Loreal",
+    "category": "dưỡng ẩm",
+    "type": "gel moisturizer",
+
+    "core": {
+      "skin_type": ["da dầu", "da hỗn hợp"],
+      "ingredients": ["Aloe", "Hyaluronic Acid"],
+      "effects": ["cấp nước", "làm mát"],
+      "finish": "nhẹ"
+    },
+
+    "display": {
+      "title": "L'Oreal Hydra Genius Aloe Water",
+      "short_description": "cấp nước siêu nhẹ",
+      "full_description": "L'Oreal Hydra Genius Aloe Water có kết cấu lỏng nhẹ như nước giúp cấp nước nhanh, mang lại cảm giác mát da và không gây bí. Phù hợp khí hậu nóng ẩm.",
+      "highlights": [
+        "siêu nhẹ",
+        "không bí",
+        "mát da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "70ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "loreal-revitalift-triple",
+    "slug": "revitalift-triple-power",
+    "brand": "Loreal",
+    "category": "dưỡng ẩm",
+    "type": "anti-aging moisturizer",
+
+    "core": {
+      "skin_type": ["da lão hoá", "da xỉn màu"],
+      "ingredients": ["Retinol", "Vitamin C", "Hyaluronic Acid"],
+      "effects": ["giảm nếp nhăn", "làm sáng", "cấp ẩm"]
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift Triple Power",
+      "short_description": "3 trong 1 chống lão hoá",
+      "full_description": "L'Oreal Revitalift Triple Power kết hợp retinol, vitamin C và HA giúp giảm nếp nhăn, làm sáng và cải thiện độ đàn hồi da. Phù hợp cho da 25+.",
+      "highlights": [
+        "anti-aging mạnh",
+        "làm sáng",
+        "đa tác dụng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 700000 }
+    ]
+  },
+
+  {
+    "id": "loreal-laser-x3",
+    "slug": "revitalift-laser-x3",
+    "brand": "Loreal",
+    "category": "dưỡng ẩm",
+    "type": "anti-aging moisturizer",
+
+    "core": {
+      "skin_type": ["da 30+", "da lão hoá"],
+      "ingredients": ["Pro-Xylane", "Hyaluronic Acid"],
+      "effects": ["tăng đàn hồi", "giảm nhăn"]
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift Laser X3",
+      "short_description": "chống lão hoá chuyên sâu",
+      "full_description": "L'Oreal Revitalift Laser X3 giúp cải thiện nếp nhăn sâu và tăng độ săn chắc da nhờ công nghệ Pro-Xylane độc quyền.",
+      "highlights": [
+        "giảm nhăn sâu",
+        "tăng đàn hồi",
+        "dưỡng sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 800000 }
+    ]
+  },
+
+  {
+    "id": "loreal-ha-oil-control",
+    "slug": "ha-oil-control",
+    "brand": "Loreal",
+    "category": "dưỡng ẩm",
+    "type": "oil-control gel",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "ingredients": ["Hyaluronic Acid", "Silica"],
+      "effects": ["cấp nước", "kiềm dầu"],
+      "finish": "lì"
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift HA Gel Cream Oil Control",
+      "short_description": "cấp nước + kiềm dầu",
+      "full_description": "L'Oreal HA Gel Cream Oil Control giúp cấp ẩm nhẹ và kiểm soát dầu hiệu quả, mang lại làn da khô thoáng và mịn màng.",
+      "highlights": [
+        "kiềm dầu",
+        "không bí",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "50ml", "price": 300000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-winter-melon-gel",
+    "slug": "winter-melon-gel-cream",
+    "brand": "Cocoon",
+    "category": "dưỡng ẩm",
+    "type": "acne gel",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Winter Melon", "Niacinamide"],
+      "effects": ["giảm dầu", "giảm mụn"],
+      "finish": "ráo"
+    },
+
+    "display": {
+      "title": "Cocoon Winter Melon Gel Cream",
+      "short_description": "kiềm dầu + giảm mụn",
+      "full_description": "Cocoon Winter Melon Gel Cream giúp kiểm soát dầu và hỗ trợ giảm mụn nhờ bí đao và Niacinamide. Kết cấu gel nhẹ phù hợp khí hậu nóng.",
+      "highlights": [
+        "kiềm dầu",
+        "giảm mụn",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "30ml", "price": 170000 },
+      { "size": "100ml", "price": 320000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-rose-gel",
+    "slug": "rose-aqua-gel",
+    "brand": "Cocoon",
+    "category": "dưỡng ẩm",
+    "type": "hydrating gel",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "ingredients": ["Rose", "Hyaluronic Acid"],
+      "effects": ["cấp nước", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Cocoon Rose Aqua Gel Cream",
+      "short_description": "cấp nước nhẹ",
+      "full_description": "Cocoon Rose Aqua Gel Cream giúp cấp nước nhanh và làm dịu da, phù hợp dùng hằng ngày cho routine cơ bản.",
+      "highlights": [
+        "cấp nước",
+        "dịu nhẹ",
+        "dễ dùng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 300000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-turmeric-gel",
+    "slug": "turmeric-gel-cream",
+    "brand": "Cocoon",
+    "category": "dưỡng ẩm",
+    "type": "brightening gel",
+
+    "core": {
+      "skin_type": ["da thâm", "da mụn"],
+      "ingredients": ["Turmeric", "Niacinamide"],
+      "effects": ["làm sáng", "mờ thâm"]
+    },
+
+    "display": {
+      "title": "Cocoon Turmeric Gel Cream",
+      "short_description": "mờ thâm + sáng da",
+      "full_description": "Cocoon Turmeric Gel Cream giúp giảm thâm mụn và làm sáng da nhờ nghệ và Niacinamide. Phù hợp cho da sau mụn.",
+      "highlights": [
+        "mờ thâm",
+        "làm sáng",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-rose-serum",
+    "slug": "rose-serum",
+    "brand": "Cocoon",
+    "category": "dưỡng ẩm",
+    "type": "hydrating serum",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "ingredients": ["Hyaluronic Acid", "Panthenol"],
+      "effects": ["cấp ẩm sâu", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Cocoon Rose Serum",
+      "short_description": "cấp ẩm sâu",
+      "full_description": "Cocoon Rose Serum giúp cấp nước sâu và phục hồi da nhạy cảm, phù hợp dùng trước kem dưỡng.",
+      "highlights": [
+        "cấp ẩm sâu",
+        "phục hồi",
+        "nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "30ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-lotus-balm",
+    "slug": "lotus-multi-balm",
+    "brand": "Cocoon",
+    "category": "dưỡng ẩm",
+    "type": "occlusive balm",
+
+    "core": {
+      "skin_type": ["da rất khô"],
+      "ingredients": ["Shea Butter", "Plant Oils"],
+      "effects": ["khóa ẩm", "làm mềm"],
+      "finish": "bóng"
+    },
+
+    "display": {
+      "title": "Cocoon Lotus Multi Balm",
+      "short_description": "khóa ẩm mạnh",
+      "full_description": "Cocoon Lotus Multi Balm giúp khóa ẩm mạnh và bảo vệ da khỏi mất nước, phù hợp cho vùng da khô nứt hoặc môi.",
+      "highlights": [
+        "khóa ẩm",
+        "dưỡng sâu",
+        "đa năng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "30ml", "price": 200000 }
+    ]
+  }
+]
