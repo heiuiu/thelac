@@ -1,0 +1,522 @@
+[
+  {
+    "id": "bioderma-sensibio-h2o",
+    "slug": "sensibio-h2o",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da nhạy cảm", "da thường", "da khô nhẹ"],
+      "ingredients": ["PEG-6", "Mannitol", "Xylitol"],
+      "effects": ["làm sạch", "làm dịu", "giữ cân bằng da"],
+      "ph": 5.5
+    },
+
+    "display": {
+      "title": "Bioderma Sensibio H2O",
+      "short_description": "tẩy trang dịu nhẹ cho da nhạy cảm",
+      "full_description": "Bioderma Sensibio H2O là nước tẩy trang micellar nổi tiếng với khả năng làm sạch sâu mà vẫn cực kỳ dịu nhẹ cho da nhạy cảm. Sản phẩm giúp loại bỏ lớp trang điểm, bụi bẩn và tạp chất mà không làm tổn hại hàng rào bảo vệ da. Công thức không chứa cồn, hương liệu hay paraben giúp giảm nguy cơ kích ứng, đồng thời giữ cho làn da luôn mềm mại và cân bằng sau khi sử dụng.",
+      "highlights": [
+        "dịu nhẹ hàng đầu",
+        "không cay mắt",
+        "không cần rửa lại"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 220000 },
+      { "size": "250ml", "price": 420000 },
+      { "size": "500ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sebium-h2o",
+    "slug": "sebium-h2o",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Zinc", "Copper"],
+      "effects": ["kiểm soát dầu", "giảm mụn"]
+    },
+
+    "display": {
+      "title": "Bioderma Sebium H2O",
+      "short_description": "tẩy trang cho da dầu mụn",
+      "full_description": "Bioderma Sebium H2O là nước tẩy trang chuyên biệt dành cho da dầu và da mụn, giúp làm sạch sâu lỗ chân lông đồng thời kiểm soát bã nhờn hiệu quả. Công thức chứa Zinc và Copper hỗ trợ giảm dầu, kháng khuẩn và hạn chế hình thành mụn, mang lại làn da sạch thoáng và ít bóng nhờn hơn.",
+      "highlights": [
+        "kiểm soát dầu",
+        "giảm mụn",
+        "làm sạch sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 420000 },
+      { "size": "500ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-hydrabio-h2o",
+    "slug": "hydrabio-h2o",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da khô", "da thiếu nước"],
+      "ingredients": ["Glycerin"],
+      "effects": ["dưỡng ẩm", "làm mềm da"]
+    },
+
+    "display": {
+      "title": "Bioderma Hydrabio H2O",
+      "short_description": "tẩy trang + cấp ẩm",
+      "full_description": "Bioderma Hydrabio H2O là nước tẩy trang kết hợp cấp ẩm chuyên sâu, giúp làm sạch nhẹ nhàng đồng thời phục hồi độ ẩm cho làn da khô và thiếu nước. Sản phẩm mang lại cảm giác mềm mịn, không khô căng sau khi sử dụng, phù hợp cho da cần dưỡng ẩm trong quá trình làm sạch.",
+      "highlights": [
+        "cấp ẩm",
+        "không khô căng",
+        "làm mềm da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 350000 },
+      { "size": "500ml", "price": 550000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-pigmentbio-h2o",
+    "slug": "pigmentbio-h2o",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da xỉn màu", "da thâm"],
+      "ingredients": ["Niacinamide"],
+      "effects": ["làm sáng", "làm sạch"]
+    },
+
+    "display": {
+      "title": "Bioderma Pigmentbio H2O",
+      "short_description": "tẩy trang hỗ trợ sáng da",
+      "full_description": "Bioderma Pigmentbio H2O là nước tẩy trang giúp làm sạch bụi bẩn và lớp trang điểm đồng thời hỗ trợ cải thiện tình trạng da xỉn màu và thâm sạm. Công thức chứa Niacinamide giúp làm sáng và đều màu da, mang lại làn da tươi sáng hơn sau thời gian sử dụng.",
+      "highlights": [
+        "hỗ trợ sáng da",
+        "làm sạch nhẹ",
+        "giữ da mềm mịn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 350000 },
+      { "size": "500ml", "price": 550000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-abcdem-h2o",
+    "slug": "abcdem-h2o",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["trẻ em", "da siêu nhạy cảm"],
+      "effects": ["làm sạch nhẹ"]
+    },
+
+    "display": {
+      "title": "Bioderma ABCDerm H2O",
+      "short_description": "tẩy trang siêu dịu nhẹ cho trẻ",
+      "full_description": "Bioderma ABCDerm H2O là dung dịch làm sạch dành riêng cho làn da mỏng manh của trẻ nhỏ, giúp làm sạch nhẹ nhàng mà không gây kích ứng. Công thức không chứa cồn và xà phòng đảm bảo an toàn tối đa, phù hợp cho da cực kỳ nhạy cảm.",
+      "highlights": [
+        "cực kỳ dịu nhẹ",
+        "an toàn cho trẻ em",
+        "không gây kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "500ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-eye-remover",
+    "slug": "sensibio-eye",
+    "brand": "Bioderma",
+    "category": "tẩy trang",
+    "type": "eye remover",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "effects": ["tẩy waterproof"]
+    },
+
+    "display": {
+      "title": "Bioderma Sensibio H2O Eye",
+      "short_description": "tẩy trang mắt môi 2 lớp",
+      "full_description": "Bioderma Sensibio H2O Eye là sản phẩm tẩy trang mắt môi dạng 2 lớp giúp loại bỏ hiệu quả mascara và son lì chống nước mà không gây kích ứng. Công thức dịu nhẹ giúp làm sạch mà không cần chà xát mạnh, phù hợp cho vùng da mắt nhạy cảm.",
+      "highlights": [
+        "tẩy waterproof",
+        "không cay mắt",
+        "dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 150000 }
+    ]
+  }
+]
+
+[
+  {
+    "id": "innisfree-green-tea-oil",
+    "slug": "green-tea-cleansing-oil",
+    "brand": "Innisfree",
+    "category": "tẩy trang",
+    "type": "cleansing oil",
+
+    "core": {
+      "skin_type": ["da khô", "da thường"],
+      "ingredients": ["Green Tea", "Amino Acid"],
+      "effects": ["làm sạch sâu", "giữ ẩm"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Cleansing Oil",
+      "short_description": "dầu tẩy trang dưỡng ẩm",
+      "full_description": "Innisfree Green Tea Cleansing Oil là dầu tẩy trang giúp làm sạch sâu lớp makeup và kem chống nắng, đồng thời duy trì độ ẩm tự nhiên cho da. Công thức chứa trà xanh Jeju và amino acid giúp làm dịu, chống oxy hóa và bảo vệ da, mang lại làn da sạch mịn mà không bị khô căng.",
+      "highlights": [
+        "làm sạch makeup đậm",
+        "dưỡng ẩm",
+        "chống oxy hóa"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 320000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-apple-oil",
+    "slug": "apple-seed-cleansing-oil",
+    "brand": "Innisfree",
+    "category": "tẩy trang",
+    "type": "cleansing oil",
+
+    "core": {
+      "skin_type": ["da thường", "da xỉn màu"],
+      "ingredients": ["Apple Seed Oil"],
+      "effects": ["làm sạch", "làm sáng"]
+    },
+
+    "display": {
+      "title": "Innisfree Apple Seed Cleansing Oil",
+      "short_description": "làm sạch + sáng da",
+      "full_description": "Innisfree Apple Seed Cleansing Oil giúp làm sạch sâu lỗ chân lông và loại bỏ lớp trang điểm đậm, đồng thời hỗ trợ cải thiện độ sáng của da nhờ chiết xuất hạt táo. Sản phẩm mang lại làn da mềm mịn và tươi tắn hơn sau khi sử dụng.",
+      "highlights": [
+        "làm sạch sâu",
+        "hỗ trợ sáng da",
+        "mềm mịn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 320000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-cleansing-water",
+    "slug": "green-tea-cleansing-water",
+    "brand": "Innisfree",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da nhạy cảm", "da khô nhẹ"],
+      "ingredients": ["Green Tea"],
+      "effects": ["làm sạch nhẹ", "dưỡng ẩm"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Cleansing Water",
+      "short_description": "tẩy trang nhẹ + cấp ẩm",
+      "full_description": "Innisfree Green Tea Cleansing Water là nước tẩy trang micellar giúp làm sạch bụi bẩn và lớp trang điểm nhẹ, đồng thời cung cấp độ ẩm nhẹ cho da. Công thức dịu nhẹ phù hợp cho da nhạy cảm, mang lại cảm giác sạch thoáng và mềm mại.",
+      "highlights": [
+        "dịu nhẹ",
+        "cấp ẩm",
+        "không dính"
+      ]
+    },
+
+    "price_options": [
+      { "size": "300ml", "price": 280000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-eye-remover",
+    "slug": "apple-lip-eye-remover",
+    "brand": "Innisfree",
+    "category": "tẩy trang",
+    "type": "eye remover",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "effects": ["tẩy waterproof"]
+    },
+
+    "display": {
+      "title": "Innisfree Apple Lip & Eye Remover",
+      "short_description": "tẩy trang mắt môi",
+      "full_description": "Innisfree Apple Lip & Eye Remover là sản phẩm tẩy trang chuyên biệt giúp loại bỏ mascara và son lì chống nước một cách hiệu quả. Công thức 2 lớp giúp làm sạch nhanh chóng mà không gây kích ứng cho vùng mắt nhạy cảm.",
+      "highlights": [
+        "tẩy waterproof",
+        "dịu nhẹ",
+        "không cay mắt"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 150000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-olive-oil",
+    "slug": "olive-cleansing-oil",
+    "brand": "Innisfree",
+    "category": "tẩy trang",
+    "type": "cleansing oil",
+
+    "core": {
+      "skin_type": ["da khô"],
+      "ingredients": ["Olive Oil"],
+      "effects": ["dưỡng ẩm", "làm sạch"]
+    },
+
+    "display": {
+      "title": "Innisfree Olive Cleansing Oil",
+      "short_description": "dưỡng ẩm mạnh + làm sạch",
+      "full_description": "Innisfree Olive Cleansing Oil chứa dầu olive giúp làm sạch sâu và cung cấp độ ẩm dồi dào cho làn da khô. Sản phẩm giúp da mềm mại, mịn màng và không bị khô căng sau khi sử dụng.",
+      "highlights": [
+        "dưỡng ẩm mạnh",
+        "làm sạch sâu",
+        "mềm da"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 300000 }
+    ]
+  },
+
+  {
+    "id": "loreal-micellar-refreshing",
+    "slug": "micellar-refreshing",
+    "brand": "Loreal",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da thường", "da hỗn hợp"],
+      "effects": ["làm sạch nhẹ"]
+    },
+
+    "display": {
+      "title": "L'Oreal Micellar Water Refreshing",
+      "short_description": "tẩy trang dịu nhẹ",
+      "full_description": "L'Oreal Micellar Water Refreshing giúp làm sạch bụi bẩn, dầu thừa và lớp trang điểm nhẹ một cách dịu nhẹ. Công thức micellar giúp làm sạch hiệu quả mà không làm khô da, phù hợp cho da thường và hỗn hợp.",
+      "highlights": [
+        "dịu nhẹ",
+        "dễ dùng",
+        "giá tốt"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "loreal-micellar-moisturizing",
+    "slug": "micellar-moisturizing",
+    "brand": "Loreal",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "effects": ["dưỡng ẩm"]
+    },
+
+    "display": {
+      "title": "L'Oreal Micellar Water Moisturizing",
+      "short_description": "tẩy trang + dưỡng ẩm",
+      "full_description": "L'Oreal Micellar Water Moisturizing giúp làm sạch nhẹ nhàng đồng thời bổ sung độ ẩm cho da khô và nhạy cảm. Sản phẩm giúp da mềm mại, không bị khô căng sau khi sử dụng.",
+      "highlights": [
+        "giữ ẩm",
+        "dịu nhẹ",
+        "không khô căng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 220000 }
+    ]
+  },
+
+  {
+    "id": "loreal-micellar-deep",
+    "slug": "micellar-deep",
+    "brand": "Loreal",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "effects": ["kiểm soát dầu", "làm sạch sâu"]
+    },
+
+    "display": {
+      "title": "L'Oreal Micellar Water Deep Cleansing",
+      "short_description": "làm sạch sâu + kiềm dầu",
+      "full_description": "L'Oreal Micellar Water Deep Cleansing giúp làm sạch sâu lỗ chân lông và kiểm soát dầu thừa hiệu quả. Sản phẩm phù hợp cho da dầu, giúp da luôn sạch thoáng và giảm bóng nhờn.",
+      "highlights": [
+        "làm sạch sâu",
+        "kiềm dầu",
+        "giảm bóng nhờn"
+      ]
+    },
+
+    "price_options": [
+      { "size": "250ml", "price": 220000 }
+    ]
+  },
+
+  {
+    "id": "loreal-eye-remover",
+    "slug": "loreal-eye-remover",
+    "brand": "Loreal",
+    "category": "tẩy trang",
+    "type": "eye remover",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "effects": ["tẩy waterproof"]
+    },
+
+    "display": {
+      "title": "L'Oreal Lip & Eye Remover",
+      "short_description": "tẩy trang mắt môi",
+      "full_description": "L'Oreal Lip & Eye Remover giúp loại bỏ lớp trang điểm chống nước như mascara và son lì một cách hiệu quả mà vẫn dịu nhẹ cho vùng da nhạy cảm.",
+      "highlights": [
+        "tẩy waterproof",
+        "dịu nhẹ",
+        "hiệu quả"
+      ]
+    },
+
+    "price_options": [
+      { "size": "125ml", "price": 150000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-winter-melon-micellar",
+    "slug": "winter-melon-micellar",
+    "brand": "Cocoon",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Winter Melon", "Tea Tree"],
+      "effects": ["giảm mụn", "kiểm soát dầu"]
+    },
+
+    "display": {
+      "title": "Cocoon Winter Melon Micellar Water",
+      "short_description": "tẩy trang hỗ trợ mụn",
+      "full_description": "Cocoon Winter Melon Micellar Water là nước tẩy trang thuần chay giúp làm sạch sâu và hỗ trợ giảm mụn nhờ chiết xuất bí đao và tràm trà. Sản phẩm giúp kiểm soát dầu và làm dịu da, phù hợp với khí hậu nóng ẩm.",
+      "highlights": [
+        "thuần chay",
+        "giảm mụn",
+        "kiềm dầu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "500ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-rose-micellar",
+    "slug": "rose-micellar",
+    "brand": "Cocoon",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da khô", "da nhạy cảm"],
+      "effects": ["dưỡng ẩm", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Cocoon Rose Micellar Water",
+      "short_description": "tẩy trang dưỡng ẩm",
+      "full_description": "Cocoon Rose Micellar Water giúp làm sạch nhẹ nhàng đồng thời dưỡng ẩm và làm dịu da nhờ chiết xuất hoa hồng. Sản phẩm phù hợp cho da khô và nhạy cảm.",
+      "highlights": [
+        "dưỡng ẩm",
+        "làm dịu",
+        "dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "310ml", "price": 180000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-lotus-micellar",
+    "slug": "lotus-micellar",
+    "brand": "Cocoon",
+    "category": "tẩy trang",
+    "type": "micellar water",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "effects": ["làm dịu", "phục hồi"]
+    },
+
+    "display": {
+      "title": "Cocoon Lotus Micellar Water",
+      "short_description": "làm dịu + phục hồi da",
+      "full_description": "Cocoon Lotus Micellar Water giúp làm sạch nhẹ nhàng đồng thời hỗ trợ phục hồi và cân bằng da nhạy cảm. Sản phẩm mang lại cảm giác dịu nhẹ và dễ chịu sau khi sử dụng.",
+      "highlights": [
+        "phục hồi da",
+        "làm dịu",
+        "không kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "500ml", "price": 230000 }
+    ]
+  }
+]

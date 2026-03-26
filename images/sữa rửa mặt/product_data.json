@@ -1,0 +1,511 @@
+[
+  {
+    "id": "bioderma-sebium-gel-actif",
+    "slug": "sebium-gel-moussant-actif",
+    "brand": "Bioderma",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn", "da hỗn hợp"],
+      "ingredients": ["BHA", "AHA", "Zinc"],
+      "effects": ["giảm mụn", "tẩy tế bào chết", "kiểm soát dầu"],
+      "ph": 4.5
+    },
+
+    "display": {
+      "title": "Sữa rửa mặt Bioderma Sébium Gel Moussant Actif",
+      "short_description": "làm sạch sâu + giảm mụn hiệu quả",
+
+      "full_description": "Bioderma Sébium Gel Moussant Actif là sữa rửa mặt chuyên biệt cho da dầu mụn với công thức chứa AHA và BHA giúp làm sạch sâu lỗ chân lông, loại bỏ tế bào chết và giảm bã nhờn hiệu quả. Sản phẩm hỗ trợ cải thiện mụn đầu đen, mụn ẩn và ngăn ngừa tình trạng bít tắc gây mụn. Với độ pH 4.5 cân bằng và công thức không chứa cồn, paraben hay xà phòng, sản phẩm vẫn giữ được độ ẩm tự nhiên của da, không gây khô căng khi sử dụng hằng ngày.",
+
+      "highlights": [
+        "chứa AHA + BHA",
+        "giảm mụn đầu đen & mụn ẩn",
+        "không cồn, không paraben"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "cerave-foaming-cleanser",
+    "slug": "cerave-foaming-cleanser",
+    "brand": "Cerave",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da dầu"],
+      "ingredients": ["Hyaluronic Acid"],
+      "effects": ["làm sạch", "giữ ẩm", "kiềm dầu"]
+    },
+
+    "display": {
+      "title": "Cerave Foaming Cleanser",
+      "short_description": "làm sạch sâu nhưng không khô da",
+
+      "full_description": "Cerave Foaming Cleanser là sữa rửa mặt được phát triển bởi bác sĩ da liễu, giúp làm sạch hiệu quả bụi bẩn, dầu thừa và cặn trang điểm mà vẫn giữ được độ ẩm tự nhiên của da. Công thức chứa Hyaluronic Acid hỗ trợ cấp ẩm và phục hồi hàng rào bảo vệ da, giúp da luôn mềm mại sau khi rửa mặt. Sản phẩm phù hợp cho da dầu và có thể sử dụng hằng ngày mà không gây kích ứng.",
+
+      "highlights": [
+        "được bác sĩ da liễu phát triển",
+        "giữ ẩm tự nhiên",
+        "không gây kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "236ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "cetaphil-gentle-cleanser",
+    "slug": "cetaphil-gentle-cleanser",
+    "brand": "Cetaphil",
+    "category": "sữa rửa mặt",
+    "type": "gentle cleanser",
+
+    "core": {
+      "skin_type": ["mọi loại da", "da nhạy cảm"],
+      "ingredients": ["Glycerin", "Niacinamide", "Panthenol"],
+      "effects": ["làm sạch nhẹ", "giữ ẩm", "giảm kích ứng"]
+    },
+
+    "display": {
+      "title": "Cetaphil Gentle Skin Cleanser",
+      "short_description": "dịu nhẹ, an toàn cho da nhạy cảm",
+
+      "full_description": "Cetaphil Gentle Skin Cleanser là dòng sữa rửa mặt nổi tiếng với độ dịu nhẹ, phù hợp cho mọi loại da đặc biệt là da nhạy cảm. Sản phẩm giúp làm sạch bụi bẩn và dầu thừa mà không làm tổn hại hàng rào bảo vệ da nhờ công thức không chứa cồn, hương liệu hay chất gây kích ứng. Thành phần như Glycerin, Niacinamide và Panthenol hỗ trợ giữ ẩm, làm dịu và phục hồi da, mang lại cảm giác mềm mại và thoải mái sau khi sử dụng.",
+
+      "highlights": [
+        "không cồn, không hương liệu",
+        "phù hợp cả trẻ em",
+        "giữ độ ẩm tự nhiên"
+      ]
+    },
+
+    "price_options": [
+      { "size": "125ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-green-tea-foam",
+    "slug": "green-tea-foam",
+    "brand": "Innisfree",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da thường", "da khô"],
+      "ingredients": ["Green Tea", "Amino Acid"],
+      "effects": ["làm sạch", "dưỡng ẩm"]
+    },
+
+    "display": {
+      "title": "Innisfree Green Tea Foam Cleanser",
+      "short_description": "làm sạch nhẹ + dưỡng ẩm",
+
+      "full_description": "Innisfree Green Tea Foam Cleanser là sữa rửa mặt chiết xuất trà xanh Jeju giàu chất chống oxy hóa giúp làm sạch bụi bẩn và dầu thừa mà vẫn duy trì độ ẩm tự nhiên cho da. Công thức chứa amino acid hỗ trợ dưỡng ẩm và làm mềm da, giúp da không bị khô căng sau khi rửa. Kết cấu bọt mịn dễ sử dụng, mang lại cảm giác sạch sâu nhưng vẫn dịu nhẹ, phù hợp cho da thường và da khô.",
+
+      "highlights": [
+        "chiết xuất trà xanh Jeju",
+        "bọt mịn dễ dùng",
+        "không khô căng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-volcanic-foam",
+    "slug": "volcanic-foam",
+    "brand": "Innisfree",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da dầu", "da hỗn hợp"],
+      "ingredients": ["Volcanic Ash"],
+      "effects": ["kiềm dầu", "làm sạch sâu"]
+    },
+
+    "display": {
+      "title": "Innisfree Volcanic Pore Cleansing Foam",
+      "short_description": "hút dầu mạnh + sạch sâu lỗ chân lông",
+
+      "full_description": "Innisfree Volcanic Pore Cleansing Foam sử dụng tro núi lửa Jeju giúp hút sạch bã nhờn và bụi bẩn sâu trong lỗ chân lông, mang lại làn da sạch thoáng rõ rệt. Sản phẩm hỗ trợ kiểm soát dầu, giảm bóng nhờn và hạn chế mụn đầu đen hiệu quả. Với kết cấu bọt mịn và khả năng làm sạch mạnh mẽ nhưng không gây khô căng, đây là lựa chọn lý tưởng cho da dầu và da hỗn hợp.",
+
+      "highlights": [
+        "tro núi lửa Jeju",
+        "giảm dầu thừa",
+        "se khít lỗ chân lông"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 270000 }
+    ]
+  },
+
+  {
+    "id": "loreal-glycolic-cleanser",
+    "slug": "glycolic-cleanser",
+    "brand": "Loreal",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "ingredients": ["Glycolic Acid"],
+      "effects": ["tẩy tế bào chết", "làm sáng"]
+    },
+
+    "display": {
+      "title": "L'Oreal Glycolic Bright Cleanser",
+      "short_description": "tẩy da chết nhẹ + sáng da",
+
+      "full_description": "L'Oreal Glycolic Bright Cleanser là sữa rửa mặt chứa Glycolic Acid giúp loại bỏ tế bào chết nhẹ nhàng, làm sạch sâu và cải thiện độ sáng của làn da. Công thức tạo bọt mịn giúp làm sạch hiệu quả bụi bẩn và dầu thừa mà vẫn duy trì độ ẩm tự nhiên. Sản phẩm phù hợp cho da xỉn màu hoặc thiếu sức sống, giúp làn da trở nên đều màu và tươi sáng hơn khi sử dụng thường xuyên.",
+
+      "highlights": [
+        "chứa AHA",
+        "làm sáng da",
+        "làm sạch sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-winter-melon-cleanser",
+    "slug": "winter-melon-cleanser",
+    "brand": "Cocoon",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Winter Melon", "Tea Tree"],
+      "effects": ["giảm dầu", "giảm mụn"]
+    },
+
+    "display": {
+      "title": "Cocoon Winter Melon Cleanser",
+      "short_description": "làm sạch + hỗ trợ mụn",
+
+      "full_description": "Cocoon Winter Melon Cleanser là gel rửa mặt thuần chay với chiết xuất bí đao và tràm trà giúp làm sạch sâu, kiểm soát dầu thừa và hỗ trợ giảm mụn nhẹ. Công thức dịu nhẹ không chứa sulfate giúp làm sạch mà không gây khô da, phù hợp với khí hậu nóng ẩm. Sản phẩm mang lại cảm giác sạch thoáng, mềm mại và dễ chịu sau mỗi lần sử dụng.",
+
+      "highlights": [
+        "thuần chay",
+        "không sulfate",
+        "dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "310ml", "price": 260000 }
+    ]
+  }
+]
+
+[
+  {
+    "id": "bioderma-atoderm-gel",
+    "slug": "atoderm-intensive-gel",
+    "brand": "Bioderma",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da khô", "da rất khô", "da nhạy cảm"],
+      "ingredients": ["Niacinamide", "Zinc"],
+      "effects": ["làm dịu", "phục hồi da", "giữ ẩm"]
+    },
+
+    "display": {
+      "title": "Bioderma Atoderm Intensive Gel Moussant",
+      "short_description": "làm sạch dịu nhẹ cho da khô nhạy cảm",
+      "full_description": "Bioderma Atoderm Intensive Gel Moussant là sữa rửa mặt dành cho da khô và nhạy cảm, giúp làm sạch nhẹ nhàng mà không làm tổn hại hàng rào bảo vệ da. Công thức chứa Niacinamide và các hoạt chất dưỡng ẩm giúp làm dịu da, giảm kích ứng và khô ngứa. Sản phẩm phù hợp cho cả người lớn và trẻ nhỏ, mang lại cảm giác mềm mại và dễ chịu sau khi sử dụng.",
+      "highlights": [
+        "phục hồi hàng rào da",
+        "không gây kích ứng",
+        "dùng được cho trẻ em"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 350000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sensibio-gel",
+    "slug": "sensibio-gel",
+    "brand": "Bioderma",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "ingredients": ["Micellar", "Xylitol"],
+      "effects": ["làm sạch", "làm dịu"]
+    },
+
+    "display": {
+      "title": "Bioderma Sensibio Gel Moussant",
+      "short_description": "làm sạch dịu nhẹ cho da nhạy cảm",
+      "full_description": "Bioderma Sensibio Gel Moussant là gel rửa mặt tạo bọt dịu nhẹ, sử dụng công nghệ micellar giúp làm sạch bụi bẩn và tạp chất mà không gây kích ứng. Công thức lành tính giúp làm dịu da và duy trì độ ẩm tự nhiên, phù hợp cho làn da nhạy cảm cần sự chăm sóc nhẹ nhàng hằng ngày.",
+      "highlights": [
+        "công nghệ micellar",
+        "không gây kích ứng",
+        "giữ ẩm nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 300000 }
+    ]
+  },
+
+  {
+    "id": "bioderma-sebium-gel",
+    "slug": "sebium-gel",
+    "brand": "Bioderma",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Zinc", "Copper"],
+      "effects": ["kiểm soát dầu", "kháng khuẩn"]
+    },
+
+    "display": {
+      "title": "Bioderma Sebium Gel Moussant",
+      "short_description": "làm sạch nhẹ + kiểm soát dầu",
+      "full_description": "Bioderma Sebium Gel Moussant là sữa rửa mặt giúp làm sạch nhẹ nhàng đồng thời kiểm soát bã nhờn và hạn chế mụn. Công thức không chứa xà phòng giúp bảo vệ lớp dầu tự nhiên của da, trong khi các thành phần như kẽm và đồng hỗ trợ kháng khuẩn và giảm bóng nhờn.",
+      "highlights": [
+        "kiểm soát dầu",
+        "kháng khuẩn",
+        "không xà phòng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "500ml", "price": 450000 }
+    ]
+  },
+
+  {
+    "id": "svr-sebiaclear",
+    "slug": "svr-sebiaclear",
+    "brand": "SVR",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da dầu", "da mụn"],
+      "ingredients": ["Gluconolactone"],
+      "effects": ["giảm mụn", "làm sạch"]
+    },
+
+    "display": {
+      "title": "SVR Sebiaclear Gel Moussant",
+      "short_description": "làm sạch sâu + hỗ trợ trị mụn",
+      "full_description": "SVR Sebiaclear Gel Moussant là sữa rửa mặt giúp làm sạch sâu bụi bẩn và dầu thừa, đồng thời hỗ trợ giảm mụn nhờ thành phần Gluconolactone. Kết cấu gel tạo bọt mịn giúp làm sạch hiệu quả mà không gây khô da, mang lại làn da sạch thoáng và mềm mại.",
+      "highlights": [
+        "hỗ trợ trị mụn",
+        "không khô da",
+        "làm sạch sâu"
+      ]
+    },
+
+    "price_options": [
+      { "size": "200ml", "price": 400000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-berry-foam",
+    "slug": "berry-foam",
+    "brand": "Innisfree",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "ingredients": ["Vitamin C"],
+      "effects": ["làm sáng", "làm sạch"]
+    },
+
+    "display": {
+      "title": "Innisfree Berry Mix Foam Cleanser",
+      "short_description": "làm sạch + sáng da nhẹ",
+      "full_description": "Innisfree Berry Mix Foam Cleanser chứa chiết xuất quả mọng giàu vitamin C giúp làm sạch da đồng thời cải thiện độ sáng tự nhiên. Sản phẩm giúp da tươi tắn và mềm mịn hơn sau khi sử dụng, phù hợp cho da xỉn màu hoặc thiếu sức sống.",
+      "highlights": [
+        "vitamin C",
+        "làm sáng da",
+        "dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 250000 }
+    ]
+  },
+
+  {
+    "id": "innisfree-jeju-mild",
+    "slug": "jeju-mild",
+    "brand": "Innisfree",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "ingredients": ["Green Tea"],
+      "effects": ["làm dịu", "làm sạch nhẹ"]
+    },
+
+    "display": {
+      "title": "Innisfree Jeju Mild Foam Cleanser",
+      "short_description": "dịu nhẹ cho da nhạy cảm",
+      "full_description": "Innisfree Jeju Mild Foam Cleanser là sữa rửa mặt dịu nhẹ dành cho da nhạy cảm, giúp làm sạch bụi bẩn mà không gây kích ứng. Công thức lành tính giúp duy trì độ ẩm tự nhiên, phù hợp sử dụng hằng ngày cho cả người lớn và trẻ em.",
+      "highlights": [
+        "cực kỳ dịu nhẹ",
+        "phù hợp trẻ em",
+        "không kích ứng"
+      ]
+    },
+
+    "price_options": [
+      { "size": "150ml", "price": 240000 }
+    ]
+  },
+
+  {
+    "id": "loreal-revitalift-foam",
+    "slug": "revitalift-foam",
+    "brand": "Loreal",
+    "category": "sữa rửa mặt",
+    "type": "foam cleanser",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "ingredients": ["BHA"],
+      "effects": ["làm sạch", "chống lão hóa"]
+    },
+
+    "display": {
+      "title": "L'Oreal Revitalift Foam Cleanser",
+      "short_description": "làm sạch + hỗ trợ chống lão hóa",
+      "full_description": "L'Oreal Revitalift Foam Cleanser giúp làm sạch sâu bụi bẩn và dầu thừa, đồng thời hỗ trợ cải thiện dấu hiệu lão hóa nhờ công thức chứa BHA và các thành phần dưỡng ẩm. Sản phẩm mang lại làn da mềm mại và tươi trẻ hơn sau mỗi lần sử dụng.",
+      "highlights": [
+        "chống lão hóa nhẹ",
+        "làm sạch sâu",
+        "giữ ẩm"
+      ]
+    },
+
+    "price_options": [
+      { "size": "100ml", "price": 200000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-turmeric-cleanser",
+    "slug": "turmeric-cleanser",
+    "brand": "Cocoon",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da xỉn màu"],
+      "ingredients": ["Turmeric", "AHA"],
+      "effects": ["làm sáng", "tẩy tế bào chết"]
+    },
+
+    "display": {
+      "title": "Cocoon Turmeric Cleanser",
+      "short_description": "làm sáng + tẩy tế bào chết nhẹ",
+      "full_description": "Cocoon Turmeric Cleanser chứa chiết xuất nghệ và AHA nhẹ giúp loại bỏ tế bào chết và cải thiện độ sáng của làn da. Công thức dịu nhẹ không gây khô giúp da mềm mại và đều màu hơn khi sử dụng thường xuyên.",
+      "highlights": [
+        "nghệ tự nhiên",
+        "làm sáng da",
+        "tẩy da chết nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "140ml", "price": 180000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-coffee-cleanser",
+    "slug": "coffee-cleanser",
+    "brand": "Cocoon",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["mọi loại da"],
+      "ingredients": ["Coffee"],
+      "effects": ["làm sạch", "tăng năng lượng da"]
+    },
+
+    "display": {
+      "title": "Cocoon Coffee Cleanser",
+      "short_description": "làm sạch + tươi mới làn da",
+      "full_description": "Cocoon Coffee Cleanser với chiết xuất cà phê giúp làm sạch bụi bẩn và dầu thừa, đồng thời mang lại cảm giác tươi mới và tràn đầy năng lượng cho làn da. Công thức dịu nhẹ giúp da sạch mà không bị khô căng.",
+      "highlights": [
+        "chiết xuất cà phê",
+        "tươi mát",
+        "làm sạch dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "140ml", "price": 170000 }
+    ]
+  },
+
+  {
+    "id": "cocoon-lotus-cleanser",
+    "slug": "lotus-cleanser",
+    "brand": "Cocoon",
+    "category": "sữa rửa mặt",
+    "type": "gel cleanser",
+
+    "core": {
+      "skin_type": ["da nhạy cảm"],
+      "ingredients": ["Lotus"],
+      "effects": ["làm dịu", "giảm kích ứng"]
+    },
+
+    "display": {
+      "title": "Cocoon Lotus Cleanser",
+      "short_description": "làm dịu + cân bằng da",
+      "full_description": "Cocoon Lotus Cleanser sử dụng chiết xuất hoa sen giúp làm sạch nhẹ nhàng đồng thời làm dịu và cân bằng da. Sản phẩm phù hợp cho da nhạy cảm, giúp giảm kích ứng và mang lại cảm giác mềm mại sau khi rửa mặt.",
+      "highlights": [
+        "làm dịu da",
+        "giảm kích ứng",
+        "dịu nhẹ"
+      ]
+    },
+
+    "price_options": [
+      { "size": "140ml", "price": 180000 }
+    ]
+  }
+]
