@@ -1,0 +1,236 @@
+[
+  {
+    "id": "p001",
+    "slug": "bioderma-sensibio-h2o",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 100, "price": 200000 },
+      { "size_ml": 250, "price": 340000 },
+      { "size_ml": 500, "price": 500000 }
+    ],
+    "tags": ["da-nhay-cam", "khong-con", "hang-ngay", "diu-nhe"],
+    "use_case": "Da nhay cam can tay trang hang ngay khong kich ung",
+    "image": "images/bioderma-sensibio-h2o.jpg"
+  },
+  {
+    "id": "p002",
+    "slug": "bioderma-sebium-h2o",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 100, "price": 200000 },
+      { "size_ml": 250, "price": 350000 },
+      { "size_ml": 500, "price": 500000 }
+    ],
+    "tags": ["da-dau", "da-mun", "kiem-soat-dau", "lo-chan-long"],
+    "use_case": "Da dau mun can lam sach sau va kiem soat nhon",
+    "image": "images/bioderma-sebium-h2o.jpg"
+  },
+  {
+    "id": "p003",
+    "slug": "bioderma-hydrabio-h2o",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 100, "price": 250000 },
+      { "size_ml": 250, "price": 390000 },
+      { "size_ml": 500, "price": 550000 }
+    ],
+    "tags": ["da-kho", "cap-am", "thieu-nuoc"],
+    "use_case": "Da kho thieu nuoc can tay trang ket hop duong am",
+    "image": "images/bioderma-hydrabio-h2o.jpg"
+  },
+  {
+    "id": "p004",
+    "slug": "bioderma-pigmentbio-h2o",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 100, "price": 300000 },
+      { "size_ml": 250, "price": 450000 },
+      { "size_ml": 500, "price": 600000 }
+    ],
+    "tags": ["da-xin-mau", "ho-tro-sang-da", "niacinamide"],
+    "use_case": "Da tham xin mau can tay trang va ho tro deu mau da",
+    "image": "images/bioderma-pigmentbio-h2o.jpg"
+  },
+  {
+    "id": "p005",
+    "slug": "bioderma-abcderm-h2o",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 100, "price": 200000 },
+      { "size_ml": 250, "price": 300000 },
+      { "size_ml": 500, "price": 400000 }
+    ],
+    "tags": ["tre-em", "sieu-diu-nhe", "da-sieu-nhay-cam"],
+    "use_case": "Da yeu va de kich ung can cong thuc toi gian",
+    "image": "images/bioderma-abcderm-h2o.jpg"
+  },
+  {
+    "id": "p006",
+    "slug": "bioderma-sensibio-h2o-eye",
+    "category": "mat-moi",
+    "price_options": [
+      { "size_ml": 125, "price": 130000 },
+      { "size_ml": 250, "price": 330000 },
+      { "size_ml": 400, "price": 580000 }
+    ],
+    "tags": ["mat-moi", "waterproof", "khong-cay-mat"],
+    "use_case": "Can tay trang mat moi makeup dam va chong nuoc",
+    "image": "images/bioderma-sensibio-h2o-eye.jpg"
+  },
+  {
+    "id": "p007",
+    "slug": "innisfree-green-tea-cleansing-oil",
+    "category": "dau-tay-trang",
+    "price_options": [
+      { "size_ml": 150, "price": 280000 },
+      { "size_ml": 200, "price": 340000 },
+      { "size_ml": 250, "price": 400000 }
+    ],
+    "tags": ["dau-tay-trang", "tra-xanh", "duong-am"],
+    "use_case": "Da thuong den kho can tay trang sach ma van mem da",
+    "image": "images/innisfree-green-tea-cleansing-oil.jpg"
+  },
+  {
+    "id": "p008",
+    "slug": "innisfree-apple-seed-cleansing-oil",
+    "category": "dau-tay-trang",
+    "price_options": [
+      { "size_ml": 150, "price": 300000 },
+      { "size_ml": 200, "price": 360000 },
+      { "size_ml": 250, "price": 400000 }
+    ],
+    "tags": ["dau-tay-trang", "hat-tao", "ho-tro-sang-da"],
+    "use_case": "Can tay trang da nang trang diem va muon da tuoi hon",
+    "image": "images/innisfree-apple-seed-cleansing-oil.jpg"
+  },
+  {
+    "id": "p009",
+    "slug": "innisfree-green-tea-cleansing-water",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 150, "price": 260000 },
+      { "size_ml": 200, "price": 280000 },
+      { "size_ml": 300, "price": 300000 }
+    ],
+    "tags": ["tay-trang-nuoc", "da-nhay-cam", "cap-am-nhe"],
+    "use_case": "Can tay trang nhe cho da de kich ung hang ngay",
+    "image": "images/innisfree-green-tea-cleansing-water.jpg"
+  },
+  {
+    "id": "p010",
+    "slug": "innisfree-apple-seed-lip-eye-remover",
+    "category": "mat-moi",
+    "price_options": [
+      { "size_ml": 100, "price": 120000 },
+      { "size_ml": 150, "price": 160000 },
+      { "size_ml": 200, "price": 200000 }
+    ],
+    "tags": ["mat-moi", "lip-remover", "waterproof"],
+    "use_case": "Can tay son li va mascara khong bi ram mat",
+    "image": "images/innisfree-apple-seed-lip-eye-remover.jpg"
+  },
+  {
+    "id": "p011",
+    "slug": "innisfree-olive-real-cleansing-oil",
+    "category": "dau-tay-trang",
+    "price_options": [
+      { "size_ml": 150, "price": 250000 },
+      { "size_ml": 200, "price": 300000 },
+      { "size_ml": 250, "price": 350000 }
+    ],
+    "tags": ["dau-tay-trang", "olive", "da-kho"],
+    "use_case": "Da kho can lam sach va bo sung do am sau khi tay trang",
+    "image": "images/innisfree-olive-real-cleansing-oil.jpg"
+  },
+  {
+    "id": "p012",
+    "slug": "loreal-micellar-water-refreshing",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 95, "price": 180000 },
+      { "size_ml": 250, "price": 220000 },
+      { "size_ml": 400, "price": 250000 }
+    ],
+    "tags": ["pho-thong", "de-dung", "da-hon-hop"],
+    "use_case": "Nguoi moi bat dau skincare can san pham de dung",
+    "image": "images/loreal-micellar-water-refreshing.jpg"
+  },
+  {
+    "id": "p013",
+    "slug": "loreal-micellar-water-moisturizing",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 95, "price": 180000 },
+      { "size_ml": 250, "price": 230000 },
+      { "size_ml": 400, "price": 260000 }
+    ],
+    "tags": ["duong-am", "da-kho", "da-nhay-cam"],
+    "use_case": "Da kho va nhay cam can tay trang kem cap am",
+    "image": "images/loreal-micellar-water-moisturizing.jpg"
+  },
+  {
+    "id": "p014",
+    "slug": "loreal-micellar-water-deep-cleansing",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 95, "price": 170000 },
+      { "size_ml": 250, "price": 230000 },
+      { "size_ml": 400, "price": 300000 }
+    ],
+    "tags": ["da-dau", "lam-sach-sau", "kiem-soat-bong-dau"],
+    "use_case": "Da dau ra nhieu ba nhon can cong thuc sach sau",
+    "image": "images/loreal-micellar-water-deep-cleansing.jpg"
+  },
+  {
+    "id": "p015",
+    "slug": "loreal-lip-eye-remover",
+    "category": "mat-moi",
+    "price_options": [
+      { "size_ml": 95, "price": 120000 },
+      { "size_ml": 125, "price": 150000 },
+      { "size_ml": 200, "price": 180000 }
+    ],
+    "tags": ["mat-moi", "waterproof", "makeup-dam"],
+    "use_case": "Can tay trang vung mat moi khi makeup dam",
+    "image": "images/loreal-lip-eye-remover.jpg"
+  },
+  {
+    "id": "p016",
+    "slug": "cocoon-winter-melon-micellar-water",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 140, "price": 54000 },
+      { "size_ml": 310, "price": 245000 },
+      { "size_ml": 500, "price": 565000 }
+    ],
+    "tags": ["bi-dao", "da-mun", "thuong-hieu-viet"],
+    "use_case": "Da mun de viem can san pham lam sach diu nhe",
+    "image": "images/cocoon-winter-melon-micellar-water.jpg"
+  },
+  {
+    "id": "p017",
+    "slug": "cocoon-rose-micellar-water",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 140, "price": 115000 },
+      { "size_ml": 310, "price": 210000 },
+      { "size_ml": 500, "price": 285000 }
+    ],
+    "tags": ["hoa-hong", "duong-am", "da-kho", "thuong-hieu-viet"],
+    "use_case": "Da kho can lam sach nhe va lam diu",
+    "image": "images/cocoon-rose-micellar-water.jpg"
+  },
+  {
+    "id": "p018",
+    "slug": "cocoon-lotus-micellar-water",
+    "category": "tay-trang",
+    "price_options": [
+      { "size_ml": 140, "price": 45000 },
+      { "size_ml": 310, "price": 160000 },
+      { "size_ml": 500, "price": 250000 }
+    ],
+    "tags": ["sen", "phuc-hoi", "da-nhay-cam", "thuong-hieu-viet"],
+    "use_case": "Da nhay cam can phuc hoi hang rao da sau moi ngay",
+    "image": "images/cocoon-lotus-micellar-water.jpg"
+  }
+]
