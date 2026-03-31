@@ -1,11 +1,18 @@
 :root {
-  --bg: #eef7f2;
+  /* Fresh green palette */
+  --bg: #f9fafb;
   --card: #ffffff;
-  --text: #1f2a2a;
-  --muted: #5c6b6b;
-  --primary: #2ea44f;
-  --primary-dark: #1d7d3a;
-  --border: #dbe7df;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #22c55e; /* green-500 */
+  --primary-dark: #16a34a; /* green-600 */
+  --border: #e5e7eb;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 14px 44px rgba(17, 24, 39, 0.12);
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-border: rgba(17, 24, 39, 0.10);
 }
 
 * {
@@ -16,7 +23,13 @@ body {
   margin: 0;
   font-family: "Be Vietnam Pro", sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #f4fbf7 0%, #edf5f9 100%);
+  /* subtle site-wide gradient (low contrast) */
+  background: linear-gradient(180deg, var(--bg) 0%, #f3f4f6 100%);
+  background-image: linear-gradient(180deg, rgba(34, 197, 94, 0.06) 0%, rgba(34, 197, 94, 0.00) 32%),
+    linear-gradient(180deg, var(--bg) 0%, #f3f4f6 100%);
+  line-height: 1.55;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -27,8 +40,8 @@ body {
 .topbar {
   position: sticky;
   top: 0;
-  background: rgba(244, 251, 247, 0.88);
-  backdrop-filter: blur(6px);
+  background: rgba(249, 250, 251, 0.72);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   z-index: 20;
 }
@@ -43,7 +56,8 @@ body {
 .brand {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--primary-dark);
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
 
 nav {
@@ -60,17 +74,23 @@ nav a {
   font-weight: 500;
 }
 
+nav a:hover {
+  color: var(--primary-dark);
+}
+
 .nav-cart {
   margin-left: 16px;
   position: relative;
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
   border-radius: 10px;
   padding: 8px 14px;
   font: inherit;
   font-weight: 600;
   cursor: pointer;
   color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
 }
 
 .cart-badge {
@@ -98,19 +118,22 @@ nav a {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background-color: var(--primary);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.06) 100%);
 }
 
 .badge-pill {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
   color: var(--primary-dark);
   border-radius: 999px;
   padding: 7px 12px;
   font-weight: 700;
   font-size: 0.85rem;
+  box-shadow: var(--shadow-sm);
 }
 
 /* Home page (template-like) */
@@ -422,7 +445,7 @@ h1 {
 .chat-form button {
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 11px 12px;
+  padding: 10px 12px;
   font: inherit;
 }
 
@@ -436,15 +459,19 @@ h1 {
 
 .tag {
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
   border-radius: 99px;
   padding: 6px 11px;
   cursor: pointer;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
 }
 
 .tag.active {
-  background: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--primary);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.06) 100%);
+  border-color: rgba(34, 197, 94, 0.55);
   color: #fff;
 }
 
@@ -455,28 +482,31 @@ h1 {
 }
 
 .card {
-  background: #fff;
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-md);
 }
 
 .thumb {
   height: 180px;
   width: 100%;
   object-fit: cover;
-  background: radial-gradient(circle at 70% 10%, #d7f7de 0, #b4ecc1 35%, #ddf1ff 100%);
+  background: radial-gradient(circle at 70% 10%, rgba(34, 197, 94, 0.12) 0, rgba(34, 197, 94, 0.05) 40%, rgba(255, 255, 255, 0) 100%);
 }
 
 .card-body {
-  padding: 12px;
+  padding: 14px 14px 12px;
 }
 
 .meta {
   color: var(--muted);
   font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .price {
@@ -484,9 +514,16 @@ h1 {
   font-weight: 700;
 }
 
+.card-body h3 {
+  margin: 8px 0 8px;
+  font-size: 1.02rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
 .promo {
-  background: linear-gradient(120deg, #d6f8da 0%, #e7f0ff 100%);
-  border: 1px solid var(--border);
+  background: linear-gradient(120deg, rgba(34, 197, 94, 0.10) 0%, rgba(34, 197, 94, 0.03) 100%);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 24px;
   margin-bottom: 90px;
@@ -497,16 +534,28 @@ h1 {
   right: 18px;
   bottom: 18px;
   width: min(360px, calc(100% - 30px));
-  background: #fff;
-  border: 1px solid var(--border);
+  z-index: 30;
+}
+
+.chatbot--bare {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.chatbox-inner {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(22, 44, 34, 0.14);
+  box-shadow: var(--shadow-md);
 }
 
 .chat-header {
-  background: #effaf1;
-  color: var(--primary-dark);
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.12) 0%, rgba(255, 255, 255, 0.0) 100%);
+  color: var(--text);
   font-weight: 700;
   padding: 10px 12px;
   display: flex;
@@ -516,7 +565,8 @@ h1 {
 
 .chat-minimize {
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
   color: var(--text);
   border-radius: 8px;
   width: 28px;
@@ -700,12 +750,18 @@ h1 {
 
 .btn-outline {
   border: 1px solid var(--border);
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
   color: var(--text);
   border-radius: 10px;
   padding: 10px 14px;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline:hover {
+  border-color: rgba(34, 197, 94, 0.30);
 }
 
 .chips {

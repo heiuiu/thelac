@@ -17,6 +17,8 @@ const ORDERS_KEY = "lacskin_orders_v1";
 
 const els = {
   grid: document.querySelector("#productGrid"),
+  homeLink: document.querySelector("#homeLink"),
+  consultNavLink: document.querySelector("#consultNavLink"),
   searchInput: document.querySelector("#searchInput"),
   categorySelect: document.querySelector("#categorySelect"),
   sortSelect: document.querySelector("#sortSelect"),
@@ -62,6 +64,7 @@ const els = {
 
 let products = [];
 let activeTag = "all";
+let appInitialized = false;
 /** @type {Array<{ lineId: string, slug: string, name: string, brand: string, image: string, volume_ml: number|null, price_vnd: number, qty: number }>} */
 let cart = [];
 const DATA_SOURCES = [
@@ -73,9 +76,8 @@ const DATA_SOURCES = [
   "./images/duongam_data.json"
 ];
 
-// List all images under /images so we can "guess" matching images per product.
-// (Browser can load UTF-8 paths; JS source will contain escaped sequences for safety.)
-const IMAGE_FILES = ["images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Cr\u00e8me Ultra(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Cr\u00e8me Ultra.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Intensive Baume(1).jpg", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Atoderm Intensive Baume.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Hydrabio Gel-Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma Sensibio Defensive.png", "images/D\u01b0\u1ee1ng \u1ea9m Bioderma/Bioderma S\u00e9bium Hydra.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Cocoon Rose Serum (d\u01b0\u1ee1ng \u1ea9m ph\u1ee5c h\u1ed3i).jpg", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Cocoon Sen H\u1eadu Giang Multi Balm.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch B\u00ed \u0110ao Cocoon Winter Melon Gel Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Hoa H\u1ed3ng Cocoon Rose Aqua Gel Cream(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Hoa H\u1ed3ng Cocoon Rose Aqua Gel Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Cocoon/Th\u1ea1ch Ngh\u1ec7 Cocoon Turmeric Gel Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Aloe Revital Soothing Gel(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Aloe Revital Soothing Gel.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Bija Cica Balm EX(1).png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Bija Cica Balm EX.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Cherry Blossom Jelly Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Cherry Blossom Jelly Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Balancing Cream EX.png", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Seed Hyaluronic Cream.jpg", "images/D\u01b0\u1ee1ng \u1ea9m Innisfree/Innisfree Green Tea Seed Hyaluronic Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Hydra Genius Aloe Water.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Gel Cream (Oil Control).png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Plumping Cream(1).png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Hyaluronic Acid Plumping Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Laser X3 Day Cream.png", "images/D\u01b0\u1ee1ng \u1ea9m L_oreal/L\u2019Or\u00e9al Revitalift Triple Power Moisturizer.png", "images/T\u1ea9y trang Bioderma/Bioderma ABCDerm H2O (Cho Tr\u1ebb Em)(1).jpeg", "images/T\u1ea9y trang Bioderma/Bioderma ABCDerm H2O (Cho Tr\u1ebb Em).jpeg", "images/T\u1ea9y trang Bioderma/Bioderma Hydrabio H2O (Da Kh\u00f4 & Thi\u1ebfu N\u1ed9c).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Hydrabio H2O (Da Kh\u00f4 & Thi\u1ebfu N\u1ed9c).png", "images/T\u1ea9y trang Bioderma/Bioderma Pigmentbio H2O (Da Th\u1ea5m, X\u1ec9n M\u1ea4u)(1).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Pigmentbio H2O (Da Th\u1ea5m, X\u1ec9n M\u1ea4u).jpg", "images/T\u1ea9y trang Bioderma/Bioderma Sensibio H2O (Da Nh\u1ea1y C\u1ea3m).jpg", "images/T\u1ea9y trang Bioderma/Bioderma S\u00e9bium H2O (Da D\u1ea7u & H\u1ed7n H\u1ee3p)(1).jpg", "images/T\u1ea9y trang Bioderma/Bioderma S\u00e9bium H2O (Da D\u1ea7u & H\u1ed7n H\u1ee3p).jpg", "images/T\u1ea9y trang Cocoon/b\u00ed \u0111ao Cocoon (Winter Melon Micellar Water).jpg", "images/T\u1ea9y trang Cocoon/b\u00ed \u0111ao Cocoon (Winter Melon Micellar Water).png", "images/T\u1ea9y trang Cocoon/hoa h\u1ed3ng Cocoon (Rose Micellar Water).jpg", "images/T\u1ea9y trang Cocoon/hoa h\u1ed3ng Cocoon (Rose Micellar Water).png", "images/T\u1ea9y trang Cocoon/sen H\u1eadu Giang Cocoon.jpg", "images/T\u1ea9y trang Cocoon/sen H\u1eadu Giang Cocoon.png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Cleansing Oil(1).png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Cleansing Oil.png", "images/T\u1ea9y trang Innisfree/Innisfree Apple Seed Lip & Eye Remover.png", "images/T\u1ea9y trang Innisfree/Innisfree Green Tea Amino Hydrating Cleansing Oil.png", "images/T\u1ea9y trang Innisfree/Innisfree Green Tea Cleansing Water.png", "images/T\u1ea9y trang Innisfree/Innisfree Olive Real Cleansing Oil.png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Gentle Lip & Eye Makeup Remover.png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water 3-in-1 Refreshing (Xanh d\u01b0\u01a1ng)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water 3-in-1 Refreshing (Xanh d\u01b0\u01a1ng).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Deep Cleansing (Xanh \u0111\u1eadm)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Deep Cleansing (Xanh \u0111\u1eadm).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Moisturizing (H\u1ed3ng)(1).png", "images/T\u1ea9y trang L_oreal/L\u2019Or\u00e9al Micellar Water Moisturizing (H\u1ed3ng).png", "images/toner/BIODERMA HYDRABIO TONIQUE.PNG", "images/toner/BIODERMA HYDRABIO TONIQUE.jpg", "images/toner/BIODERMA SENSIBIO TONIQUE.PNG", "images/toner/BIODERMA S\u00c9BIUM LOTION.png", "images/toner/COCOON H\u1eacU GIANG LOTUS TONER (2).PNG", "images/toner/COCOON H\u1eacU GIANG LOTUS TONER.PNG", "images/toner/COCOON ROSE TONER (HOA H\u1ed2NG).PNG", "images/toner/INNISFREE BLUEBERRY REBALANCING SKIN.jpeg", "images/toner/INNISFREE BRIGHTENING PORE SKIN.png", "images/toner/INNISFREE GREEN TEA BALANCING SKIN EX.PNG", "images/toner/INNISFREE JEJU VOLCANIC PORE TONER.PNG", "images/toner/INNISFREE TRUECARE PANTHENOL 10 MOISTURE SKIN.png", "images/toner/L\u2019OR\u00c9AL AGE PERFECT TONER.PNG", "images/toner/L\u2019OR\u00c9AL AURA PERFECT TONER (2).PNG", "images/toner/L\u2019OR\u00c9AL AURA PERFECT TONER.PNG", "images/toner/L\u2019OR\u00c9AL HYDRAFRESH ANTI-OX TONER (2).PNG", "images/toner/L\u2019OR\u00c9AL HYDRAFRESH ANTI-OX TONER.PNG", "images/toner/L\u2019OR\u00c9AL REVITALIFT CRYSTAL MICRO-ESSENCE.PNG", "images/toner/L\u2019OR\u00c9AL REVITALIFT HYALURONIC ACID TONER.PNG", "images/toner/quality_restoration_20260326175220187.png"];
+// Populated from ./images/image_manifest.json (all product images on disk).
+let IMAGE_FILES = [];
 const IMAGE_MAP = {
   "sensibio-h2o": ["images/Tẩy trang Bioderma/Bioderma Sensibio H2O (Da Nhạy Cảm).jpg"],
   "sebium-h2o": [
@@ -571,13 +573,32 @@ function normalizeCategory(category = "") {
   return normalized || "khac";
 }
 
-const IMAGE_FILES_META = IMAGE_FILES.map((path) => {
-  const tokens = slugify(path)
-    .split("-")
-    .map((t) => t.trim())
-    .filter(Boolean);
-  return { path, tokensSet: new Set(tokens) };
-});
+let IMAGE_FILES_META = [];
+
+function rebuildImageManifestMeta() {
+  IMAGE_FILES_META = IMAGE_FILES.map((path) => {
+    const tokens = slugify(path)
+      .split("-")
+      .map((t) => t.trim())
+      .filter(Boolean);
+    return { path, tokensSet: new Set(tokens) };
+  });
+}
+
+async function loadImageManifest() {
+  if (IMAGE_FILES.length) return;
+  try {
+    const res = await fetch(encodeURI("./images/image_manifest.json"));
+    if (!res.ok) return;
+    const data = await res.json();
+    if (Array.isArray(data)) {
+      IMAGE_FILES = data.filter((p) => typeof p === "string" && p.length);
+      rebuildImageManifestMeta();
+    }
+  } catch {
+    /* ignore */
+  }
+}
 
 function productMatchTokens({ slug, brand, name, category, type }) {
   const parts = [slug, brand, name, category, type].filter(Boolean).slice(0, 5);
@@ -593,45 +614,91 @@ function productMatchTokens({ slug, brand, name, category, type }) {
   return [...tokens].slice(0, 14);
 }
 
+function metasForCategory(catSlug) {
+  const all = IMAGE_FILES_META;
+  if (!all.length) return all;
+  const pSlug = (path) => slugify(path);
+  if (catSlug === "toner") return all.filter((m) => m.path.startsWith("images/toner/"));
+  if (catSlug === "tay-trang") {
+    return all.filter((m) => {
+      const s = pSlug(m.path);
+      return s.includes("tay-trang") || s.includes("t-y-trang") || m.path.includes("Tẩy trang");
+    });
+  }
+  if (catSlug === "sua-rua-mat") {
+    return all.filter((m) => {
+      const s = pSlug(m.path);
+      return s.includes("sua-rua-mat") || m.path.includes("Sữa rửa mặt");
+    });
+  }
+  if (catSlug === "mat-na") {
+    return all.filter((m) => {
+      const s = pSlug(m.path);
+      return s.includes("mat-na") || m.path.includes("mặt nạ");
+    });
+  }
+  if (catSlug === "kem-chong-nang") {
+    return all.filter((m) => {
+      const s = pSlug(m.path);
+      return s.includes("kem-chong-nang") || m.path.includes("Kem chống nắng");
+    });
+  }
+  if (catSlug === "duong-am") {
+    return all.filter((m) => {
+      const s = pSlug(m.path);
+      return s.includes("duong-am") || m.path.includes("Dưỡng ẩm");
+    });
+  }
+  return all;
+}
+
 function guessImagesForProduct({ slug, brand, name, category, type }) {
   const tokens = productMatchTokens({ slug, brand, name, category, type });
-  if (!tokens.length) return [];
-
   const catSlug = normalizeCategory(category || type || "");
-  let metas = IMAGE_FILES_META;
-  if (catSlug === "toner") {
-    metas = IMAGE_FILES_META.filter((m) => m.path.startsWith("images/toner/"));
-  } else if (catSlug === "tay-trang") {
-    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes("tay-trang"));
-  } else if (catSlug === "sua-rua-mat") {
-    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes("sua-rua-mat"));
-  } else if (["mat-na", "kem-chong-nang", "duong-am"].includes(catSlug)) {
-    metas = IMAGE_FILES_META.filter((m) => slugify(m.path).includes(catSlug));
-  }
+  const metas = metasForCategory(catSlug);
+  if (!metas.length) return [];
 
-  const scored = [];
-  for (const meta of metas) {
-    let score = 0;
-    for (const t of tokens) {
-      if (meta.tokensSet.has(t)) score += 2;
+  const scoreMeta = (metaList, minScore) => {
+    const scored = [];
+    for (const meta of metaList) {
+      let score = 0;
+      for (const t of tokens) {
+        if (meta.tokensSet.has(t)) score += 2;
+      }
+      const slugTokens = slugify(slug)
+        .split("-")
+        .filter((x) => x && x.length > 2 && x !== "toner");
+      if (slugTokens.some((st) => meta.tokensSet.has(st))) score += 6;
+      const brandTok = slugify(brand);
+      if (brandTok && meta.tokensSet.has(brandTok)) score += 4;
+      if (score >= minScore) scored.push([score, meta.path]);
     }
-    // Prefer filenames that contain the product slug tokens directly.
-    const slugTokens = slugify(slug)
-      .split("-")
-      .filter((x) => x && x.length > 2 && x !== "toner");
-    if (slugTokens.some((st) => meta.tokensSet.has(st))) score += 6;
-    // Require at least a couple token matches; otherwise we risk picking images
-    // that only share the brand name.
-    if (score >= 4) scored.push([score, meta.path]);
+    scored.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]));
+    return scored.map(([, path]) => path);
+  };
+
+  let picks = tokens.length ? scoreMeta(metas, 4) : [];
+  if (!picks.length && tokens.length) picks = scoreMeta(metas, 2);
+  if (!picks.length) {
+    const brandTok = slugify(brand);
+    if (brandTok) {
+      picks = metas
+        .filter((m) => slugify(m.path).includes(brandTok))
+        .map((m) => m.path)
+        .slice(0, 4);
+    }
   }
-  scored.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]));
-  return scored.slice(0, 4).map(([, path]) => path);
+  if (!picks.length) picks = metas.slice(0, 4).map((m) => m.path);
+  return picks.slice(0, 4);
 }
 
 function normalizeProduct(raw, idx) {
   const display = raw.display || {};
   const core = raw.core || {};
-  const slug = raw.slug || slugify(`${raw.brand || ""}-${raw.name || display.title || `item-${idx + 1}`}`);
+  const slugRaw =
+    raw.slug || slugify(`${raw.brand || ""}-${raw.name || display.title || `item-${idx + 1}`}`);
+  /** Canonical slug — tránh trùng do khác hoa/thường hoặc ký tự tương đương */
+  const slug = slugify(slugRaw);
   const name = raw.name || display.title || slug;
   const brand = raw.brand || "Unknown";
   const catSlug = normalizeCategory(raw.category || raw.type);
@@ -655,22 +722,16 @@ function normalizeProduct(raw, idx) {
       : [];
   let images = imagesFromData;
   if (!images.length) {
-    // Keep existing hardcoded mappings for old products.
+    images = guessImagesForProduct({
+      slug,
+      brand,
+      name,
+      category: raw.category || raw.type,
+      type: raw.type || ""
+    });
     const imagesFromMap = IMAGE_MAP[slug];
-    if (Array.isArray(imagesFromMap) && imagesFromMap.length) {
+    if (!images.length && Array.isArray(imagesFromMap) && imagesFromMap.length) {
       images = imagesFromMap;
-    } else if (catSlug === "toner") {
-      // For toner: auto-guess from /images/toner/.
-      images = guessImagesForProduct({
-        slug,
-        brand,
-        name,
-        category: raw.category || raw.type,
-        type: raw.type || ""
-      });
-    } else {
-      // For newly added products without images, keep empty (user updates later).
-      images = [];
     }
   }
   const rawTagCandidates =
@@ -722,17 +783,51 @@ function normalizeProduct(raw, idx) {
   };
 }
 
+function mergeProductDuplicates(a, b) {
+  const score = (p) =>
+    (p.price_options?.length || 0) * 1000 +
+    (p.description || "").length +
+    (p.images?.length || 0) +
+    (p.name || "").length;
+  const [primary, secondary] = score(a) >= score(b) ? [a, b] : [b, a];
+  const imgs = [...new Set([...(primary.images || []), ...(secondary.images || [])])].filter(Boolean);
+  return {
+    ...primary,
+    id: primary.id || secondary.id,
+    images: imgs,
+    image: imgs[0] || primary.image || secondary.image,
+    tags: [...new Set([...(primary.tags || []), ...(secondary.tags || [])])].slice(0, 6),
+    skin_type: [...new Set([...(primary.skin_type || []), ...(secondary.skin_type || [])])],
+    effects: [...new Set([...(primary.effects || []), ...(secondary.effects || [])])],
+    ingredients: [...new Set([...(primary.ingredients || []), ...(secondary.ingredients || [])])]
+  };
+}
+
+/** Một sản phẩm chỉ hiển thị một lần (dedupe mạnh tay để xóa card trùng). */
 function dedupeProducts(list) {
-  const seen = new Map();
-  list.forEach((p) => {
-    const key = p.id || p.slug;
-    if (!seen.has(key)) seen.set(key, p);
-  });
-  return [...seen.values()];
+  // Key dedupe: fingerprint brand+name+(category) để bắt mọi trường hợp "cùng sản phẩm" dù slug có thể khác.
+  const byKey = new Map();
+
+  for (const p of list) {
+    const brand = String(p.brand || "").trim();
+    const name = String(p.name || "").trim();
+
+    let key = slugify(`${brand}-${name}`);
+    if (!key) key = slugify(String(p.slug || ""));
+    if (!key) key = `tmp-${byKey.size + 1}`;
+
+    if (!byKey.has(key)) byKey.set(key, p);
+    else byKey.set(key, mergeProductDuplicates(byKey.get(key), p));
+  }
+
+  return [...byKey.values()];
 }
 
 function buildFilters(data) {
   const categories = [...new Set(data.map((p) => p.category))].sort();
+  while (els.categorySelect.options.length > 1) {
+    els.categorySelect.remove(1);
+  }
   categories.forEach((cat) => {
     const option = document.createElement("option");
     option.value = cat;
@@ -865,9 +960,12 @@ function pushChatMessage(type, text) {
 }
 
 function setChatMinimized(minimized) {
+  if (!els.chatbot) return;
   els.chatbot.classList.toggle("minimized", minimized);
-  els.chatMinimizeBtn.textContent = minimized ? "+" : "−";
-  els.chatMinimizeBtn.setAttribute("aria-expanded", minimized ? "false" : "true");
+  if (els.chatMinimizeBtn) {
+    els.chatMinimizeBtn.textContent = minimized ? "+" : "−";
+    els.chatMinimizeBtn.setAttribute("aria-expanded", minimized ? "false" : "true");
+  }
 }
 
 function chatbotSuggest(query) {
@@ -898,6 +996,34 @@ function bindEvents() {
     el.addEventListener("input", renderFiltered);
     el.addEventListener("change", renderFiltered);
   });
+
+  if (els.consultNavLink) {
+    els.consultNavLink.addEventListener("click", () => {
+      if (!els.chatbot) return;
+      setChatMinimized(false);
+    });
+  }
+
+  if (els.homeLink) {
+    els.homeLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Reset về trạng thái "trang chủ"
+      activeTag = "all";
+      if (els.searchInput) els.searchInput.value = "";
+      if (els.categorySelect) els.categorySelect.value = "all";
+      if (els.tagFilters) {
+        document.querySelectorAll(".tag").forEach((t) => t.classList.remove("active"));
+        els.tagFilters.querySelector("[data-tag='all']")?.classList.add("active");
+      }
+
+      closeModal();
+      if (els.cartDrawer && !els.cartDrawer.hidden) closeCartDrawer();
+      history.replaceState(null, "", "");
+      renderHomePage();
+      renderFiltered();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   if (els.openChatBtn) {
     els.openChatBtn.addEventListener("click", () => {
@@ -1055,19 +1181,23 @@ function bindEvents() {
     renderFiltered();
   });
 
-  els.chatForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const value = els.chatInput.value.trim();
-    if (!value) return;
-    pushChatMessage("user", value);
-    pushChatMessage("bot", chatbotSuggest(value));
-    els.chatInput.value = "";
-  });
+  if (els.chatForm && els.chatInput && els.chatLog) {
+    els.chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const value = els.chatInput.value.trim();
+      if (!value) return;
+      pushChatMessage("user", value);
+      pushChatMessage("bot", chatbotSuggest(value));
+      els.chatInput.value = "";
+    });
+  }
 
-  els.chatMinimizeBtn.addEventListener("click", () => {
-    const isMinimized = els.chatbot.classList.contains("minimized");
-    setChatMinimized(!isMinimized);
-  });
+  if (els.chatMinimizeBtn && els.chatbot) {
+    els.chatMinimizeBtn.addEventListener("click", () => {
+      const isMinimized = els.chatbot.classList.contains("minimized");
+      setChatMinimized(!isMinimized);
+    });
+  }
 
   els.newsletterForm?.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -1166,11 +1296,15 @@ function bindEvents() {
 }
 
 async function init() {
+  if (appInitialized) return;
+
   cart = loadCartFromStorage();
   updateCartBadge();
 
   // Rebuild tag label map for this page load.
   Object.keys(TAG_LABELS_BY_SLUG).forEach((k) => delete TAG_LABELS_BY_SLUG[k]);
+
+  await loadImageManifest();
 
   const loaded = await Promise.all(
     DATA_SOURCES.map(async (path) => {
@@ -1194,6 +1328,8 @@ async function init() {
   if (initialSlug && initialSlug !== "san-pham" && initialSlug !== "uu-dai" && initialSlug !== "tu-van") {
     openProductBySlug(initialSlug);
   }
+
+  appInitialized = true;
 }
 
 init();

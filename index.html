@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LacSkin - Mỹ phẩm chính hãng</title>
+    <title>The Lác - Mỹ phẩm chính hãng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,9 +15,10 @@
   <body>
     <header class="topbar">
       <div class="container nav">
-        <div class="brand">LacSkin</div>
+        <a id="homeLink" class="brand" href="#" aria-label="Về trang chủ">The Lác</a>
         <nav>
           <a href="#san-pham">Sản phẩm</a>
+          <a id="consultNavLink" href="#tu-van">Tư vấn</a>
           <button id="cartToggleBtn" class="nav-cart" type="button" aria-label="Mở giỏ hàng">
             Giỏ hàng
             <span id="cartBadge" class="cart-badge" hidden>0</span>
@@ -51,21 +52,17 @@
       <!-- section promo cũ (uu-dai) đã được thay bằng "Save 20% For Today!" phía trên -->
     </main>
 
-    <aside id="tu-van" class="chatbot" hidden>
-      <div class="chat-header">
-        <span>Trợ lý tư vấn LacSkin</span>
-        <button id="chatMinimizeBtn" class="chat-minimize" type="button" aria-label="Thu gọn trợ lý tư vấn" aria-expanded="true">−</button>
-      </div>
-      <div id="chatLog" class="chat-log">
-        <div class="bot-msg">
-          Xin chào! Bạn có thể nhập: "da dầu mụn", "da nhạy cảm", "cần tẩy trang
-          mắt môi chống nước"...
+    <aside id="tu-van" class="chatbot chatbot--bare" aria-label="Tư vấn">
+      <div class="chatbox-inner">
+        <div id="chatLog" class="chat-log">
+          <div class="bot-msg">
+            <div style="font-weight:700;margin-bottom:6px">Cần tư vấn nhanh?</div>
+            <a href="https://www.facebook.com/messages/t/1073013909224247" target="_blank" rel="noopener noreferrer">
+              Đừng ngần ngại nhắn tin cho tụi mình nếu bạn cần tư vấn thêm.
+            </a>
+          </div>
         </div>
       </div>
-      <form id="chatForm" class="chat-form">
-        <input id="chatInput" type="text" placeholder="Nhập nhu cầu của bạn..." required />
-        <button type="submit">Gửi</button>
-      </form>
     </aside>
 
     <div id="productModal" class="modal-backdrop" hidden>
